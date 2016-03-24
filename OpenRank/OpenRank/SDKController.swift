@@ -25,9 +25,17 @@ class SDKController: NSObject {
     
     //登录
     func login(){
-//        if isLogin() {
-//            
-//        }
+        
+        if OpenRankController.shareInstance().isLogin() {
+            
+        }else{
+            //登录
+            OpenRankController.shareInstance().login("123", appId: "123", nickName: "你好", headUrl: "http:",block: {
+                (back)->Void in
+                //干嘛？
+                print("block 返回值:\(back)")
+            })
+        }
     }
     
     

@@ -22,7 +22,7 @@ var finishClosure:((finish: Bool, name:String ) -> ())?
     }
     
     //是否已登录
-    private func isLogin()->Bool{
+    func isLogin()->Bool{
         return NSUserDefaults.standardUserDefaults().boolForKey(OPENRANKISLOGIN)
     }
     

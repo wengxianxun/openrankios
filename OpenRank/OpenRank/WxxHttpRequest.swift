@@ -10,6 +10,9 @@ import UIKit
 
 class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
+    typealias blockF =  (back:String)->Void
+    var blockFunc = blockF?()
+    
     func saveScore(score:Int, userid:String) {
         let urlString:String = "http://www.baidu.com"
         var url:NSURL!
@@ -53,9 +56,12 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
     //异步get
     func requestGetFromAsyn(urlString:String,block:(back:String)->Void) {
+        if blockFunc != nil{
+            blockFunc = nil
+        }
+        blockFunc = block;
         let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         request.HTTPMethod = "GET"
-        
         var conn:NSURLConnection!
         conn = NSURLConnection(request: request,delegate: self)
         conn.start()
@@ -65,6 +71,7 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
         print("请求成功！");
         print(response)
+        blockFunc!(back:"s");
     }
     
     
