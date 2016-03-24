@@ -15,6 +15,8 @@
 		A81BD0C91CA22FC1009D0927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81BD0C71CA22FC1009D0927 /* LaunchScreen.storyboard */; };
 		A81BD0D41CA22FC1009D0927 /* OpenRankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BD0D31CA22FC1009D0927 /* OpenRankTests.swift */; };
 		A81BD0DF1CA22FC1009D0927 /* OpenRankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BD0DE1CA22FC1009D0927 /* OpenRankUITests.swift */; };
+		A8453ECB1CA3D4E300D80A79 /* SDKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8453ECA1CA3D4E300D80A79 /* SDKController.swift */; };
+		A8453ECF1CA3DB3700D80A79 /* WxxHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8453ECE1CA3DB3700D80A79 /* WxxHttpRequest.swift */; };
 		A8A704E61CA28C0F00B6C4FF /* OpenRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		A81BD0DA1CA22FC1009D0927 /* OpenRankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81BD0DE1CA22FC1009D0927 /* OpenRankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRankUITests.swift; sourceTree = "<group>"; };
 		A81BD0E01CA22FC1009D0927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8453ECA1CA3D4E300D80A79 /* SDKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKController.swift; sourceTree = "<group>"; };
+		A8453ECE1CA3DB3700D80A79 /* WxxHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WxxHttpRequest.swift; sourceTree = "<group>"; };
 		A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRankController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,9 +142,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A8453ECC1CA3DAF600D80A79 /* UTIL */ = {
+			isa = PBXGroup;
+			children = (
+				A8453ECD1CA3DB0900D80A79 /* HTTP */,
+			);
+			name = UTIL;
+			sourceTree = "<group>";
+		};
+		A8453ECD1CA3DB0900D80A79 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				A8453ECE1CA3DB3700D80A79 /* WxxHttpRequest.swift */,
+			);
+			name = HTTP;
+			sourceTree = "<group>";
+		};
 		A8A704E11CA28B0500B6C4FF /* code */ = {
 			isa = PBXGroup;
 			children = (
+				A8453ECC1CA3DAF600D80A79 /* UTIL */,
 				A8A704E41CA28B1800B6C4FF /* controller */,
 				A8A704E31CA28B1300B6C4FF /* view */,
 				A8A704E21CA28B0C00B6C4FF /* model */,
@@ -167,6 +188,7 @@
 			children = (
 				A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */,
 				0948C6051CA2E03700124509 /* WxxWebViewController.swift */,
+				A8453ECA1CA3D4E300D80A79 /* SDKController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -305,7 +327,9 @@
 				A8A704E61CA28C0F00B6C4FF /* OpenRankController.swift in Sources */,
 				0948C6061CA2E03700124509 /* WxxWebViewController.swift in Sources */,
 				A81BD0C11CA22FC1009D0927 /* ViewController.swift in Sources */,
+				A8453ECB1CA3D4E300D80A79 /* SDKController.swift in Sources */,
 				A81BD0BF1CA22FC1009D0927 /* AppDelegate.swift in Sources */,
+				A8453ECF1CA3DB3700D80A79 /* WxxHttpRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
