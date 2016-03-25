@@ -12,15 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.performSelector("login", withObject: nil, afterDelay: 2)
         
-        OpenRankController.shareInstance().login("123", appId: "123", nickName: "你好", headUrl: "http:",block: {
-            (back)->Void in
-            //干嘛？
-            print("block 返回值:\(back)")
-        })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    func login() {
+        SDKController.shareInstance().login();
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

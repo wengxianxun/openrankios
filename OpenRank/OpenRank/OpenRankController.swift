@@ -44,11 +44,39 @@ var finishClosure:((finish: Bool, name:String ) -> ())?
             print("block 返回值:\(back)")
         })
      */
-    func login(openId:String,appId:String,nickName:String,headUrl:String,block:(back:NSString)->Void) {
+    func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
         
-            block(back: "你好")
+        var url = NSURL(string: "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)")
+        
+        
+        
+        block(backbool: true)
         
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

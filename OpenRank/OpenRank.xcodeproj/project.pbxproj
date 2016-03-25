@@ -18,6 +18,17 @@
 		A8453ECB1CA3D4E300D80A79 /* SDKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8453ECA1CA3D4E300D80A79 /* SDKController.swift */; };
 		A8453ECF1CA3DB3700D80A79 /* WxxHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8453ECE1CA3DB3700D80A79 /* WxxHttpRequest.swift */; };
 		A8A704E61CA28C0F00B6C4FF /* OpenRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */; };
+		A8AA88811CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8AA887F1CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle */; };
+		A8AA88821CA4D46F004875CF /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88801CA4D46F004875CF /* TencentOpenAPI.framework */; };
+		A8AA88871CA4D47B004875CF /* sdkCall.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AA88851CA4D47B004875CF /* sdkCall.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8AA88891CA4D623004875CF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88881CA4D623004875CF /* Security.framework */; };
+		A8AA888B1CA4D62F004875CF /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA888A1CA4D62F004875CF /* libiconv.tbd */; };
+		A8AA888D1CA4D637004875CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA888C1CA4D637004875CF /* SystemConfiguration.framework */; };
+		A8AA888F1CA4D640004875CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA888E1CA4D640004875CF /* CoreGraphics.framework */; };
+		A8AA88911CA4D64A004875CF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88901CA4D64A004875CF /* libsqlite3.tbd */; };
+		A8AA88931CA4D652004875CF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88921CA4D652004875CF /* CoreTelephony.framework */; };
+		A8AA88951CA4D659004875CF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88941CA4D659004875CF /* libstdc++.tbd */; };
+		A8AA88971CA4D660004875CF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88961CA4D660004875CF /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +66,20 @@
 		A8453ECA1CA3D4E300D80A79 /* SDKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKController.swift; sourceTree = "<group>"; };
 		A8453ECE1CA3DB3700D80A79 /* WxxHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WxxHttpRequest.swift; sourceTree = "<group>"; };
 		A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRankController.swift; sourceTree = "<group>"; };
+		A8AA887F1CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		A8AA88801CA4D46F004875CF /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		A8AA88831CA4D47A004875CF /* OpenRank-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenRank-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8AA88841CA4D47B004875CF /* sdkCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkCall.h; sourceTree = "<group>"; };
+		A8AA88851CA4D47B004875CF /* sdkCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdkCall.m; sourceTree = "<group>"; };
+		A8AA88861CA4D47B004875CF /* sdkDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkDef.h; sourceTree = "<group>"; };
+		A8AA88881CA4D623004875CF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8AA888A1CA4D62F004875CF /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A8AA888C1CA4D637004875CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8AA888E1CA4D640004875CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8AA88901CA4D64A004875CF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A8AA88921CA4D652004875CF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8AA88941CA4D659004875CF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		A8AA88961CA4D660004875CF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +87,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AA88971CA4D660004875CF /* libz.tbd in Frameworks */,
+				A8AA88951CA4D659004875CF /* libstdc++.tbd in Frameworks */,
+				A8AA88931CA4D652004875CF /* CoreTelephony.framework in Frameworks */,
+				A8AA88911CA4D64A004875CF /* libsqlite3.tbd in Frameworks */,
+				A8AA888F1CA4D640004875CF /* CoreGraphics.framework in Frameworks */,
+				A8AA888D1CA4D637004875CF /* SystemConfiguration.framework in Frameworks */,
+				A8AA888B1CA4D62F004875CF /* libiconv.tbd in Frameworks */,
+				A8AA88891CA4D623004875CF /* Security.framework in Frameworks */,
+				A8AA88821CA4D46F004875CF /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +139,7 @@
 		A81BD0BD1CA22FC1009D0927 /* OpenRank */ = {
 			isa = PBXGroup;
 			children = (
+				A8AA887D1CA4D359004875CF /* objc */,
 				A8A704E11CA28B0500B6C4FF /* code */,
 				A81BD0EC1CA230BD009D0927 /* Supporting Files */,
 				A81BD0BE1CA22FC1009D0927 /* AppDelegate.swift */,
@@ -133,6 +168,14 @@
 		A81BD0EC1CA230BD009D0927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8AA88961CA4D660004875CF /* libz.tbd */,
+				A8AA88941CA4D659004875CF /* libstdc++.tbd */,
+				A8AA88921CA4D652004875CF /* CoreTelephony.framework */,
+				A8AA88901CA4D64A004875CF /* libsqlite3.tbd */,
+				A8AA888E1CA4D640004875CF /* CoreGraphics.framework */,
+				A8AA888C1CA4D637004875CF /* SystemConfiguration.framework */,
+				A8AA888A1CA4D62F004875CF /* libiconv.tbd */,
+				A8AA88881CA4D623004875CF /* Security.framework */,
 				A81BD0C01CA22FC1009D0927 /* ViewController.swift */,
 				A81BD0C21CA22FC1009D0927 /* Main.storyboard */,
 				A81BD0C51CA22FC1009D0927 /* Assets.xcassets */,
@@ -191,6 +234,27 @@
 				A8453ECA1CA3D4E300D80A79 /* SDKController.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		A8AA887D1CA4D359004875CF /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				A8AA887E1CA4D362004875CF /* sdk */,
+			);
+			name = objc;
+			sourceTree = "<group>";
+		};
+		A8AA887E1CA4D362004875CF /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				A8AA88841CA4D47B004875CF /* sdkCall.h */,
+				A8AA88851CA4D47B004875CF /* sdkCall.m */,
+				A8AA88861CA4D47B004875CF /* sdkDef.h */,
+				A8AA887F1CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle */,
+				A8AA88801CA4D46F004875CF /* TencentOpenAPI.framework */,
+				A8AA88831CA4D47A004875CF /* OpenRank-Bridging-Header.h */,
+			);
+			name = sdk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AA88811CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				A81BD0C91CA22FC1009D0927 /* LaunchScreen.storyboard in Resources */,
 				A81BD0C61CA22FC1009D0927 /* Assets.xcassets in Resources */,
 				A81BD0C41CA22FC1009D0927 /* Main.storyboard in Resources */,
@@ -326,6 +391,7 @@
 			files = (
 				A8A704E61CA28C0F00B6C4FF /* OpenRankController.swift in Sources */,
 				0948C6061CA2E03700124509 /* WxxWebViewController.swift in Sources */,
+				A8AA88871CA4D47B004875CF /* sdkCall.m in Sources */,
 				A81BD0C11CA22FC1009D0927 /* ViewController.swift in Sources */,
 				A8453ECB1CA3D4E300D80A79 /* SDKController.swift in Sources */,
 				A81BD0BF1CA22FC1009D0927 /* AppDelegate.swift in Sources */,
@@ -473,10 +539,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenRank",
+				);
 				INFOPLIST_FILE = OpenRank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenRank/OpenRank-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -484,10 +561,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenRank",
+				);
 				INFOPLIST_FILE = OpenRank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenRank/OpenRank-Bridging-Header.h";
 			};
 			name = Release;
 		};

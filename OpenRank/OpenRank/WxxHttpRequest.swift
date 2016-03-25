@@ -31,7 +31,17 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
         //响应对象
         var respone:NSURLResponse?
         
-        
+        do{
+            //发出请求
+            let received:NSData? = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &respone)
+            let datastring = NSString(data:received!, encoding: NSUTF8StringEncoding)
+            print(datastring)
+            
+        }catch let error as NSError{
+            //打印错误消息
+            print(error.code)
+            print(error.description)
+        }
     }
     
     //同步get

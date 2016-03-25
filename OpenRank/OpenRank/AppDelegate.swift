@@ -6,8 +6,7 @@
 //  Copyright © 2016年 wengxianxun. All rights reserved.
 //
 //  openrank 是个在线开源的排行榜sdk, 任何iPhone小游戏都可以使用openrank来实现排行榜功能，openrank提供方便快捷的api接入方式，更多功能coming soon
-import UIKit
-
+import UIKit 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -40,7 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return TencentOAuth.HandleOpenURL(url)
+    }
 
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return TencentOAuth.HandleOpenURL(url)
+    }
 
 }
 
