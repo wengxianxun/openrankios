@@ -12,6 +12,8 @@ import UIKit
 let APPID = "10000"
 class SDKController: NSObject {
 
+    var score:String = "0"
+    
     //单例
     class func shareInstance()->SDKController{
         
@@ -23,13 +25,22 @@ class SDKController: NSObject {
         return YUSingleton.instance!
     }
     
+    override init() {
+        super.init()
+        self.score = "66666666";
+    }
+    
+    func showRank() {
+        OpenRankController.shareInstance().showRankFromScore(self.score)
+    }
+    
     //登录
     func login(){
          
         if !OpenRankController.shareInstance().isLogin()  {
             
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "analysisResponse:", name: kGetUserInfoResponse, object: sdkCall.getinstance())
-            var premissions = [kOPEN_PERMISSION_GET_USER_INFO,
+            let premissions = [kOPEN_PERMISSION_GET_USER_INFO,
                                kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
                                kOPEN_PERMISSION_ADD_ALBUM,
                                kOPEN_PERMISSION_ADD_ONE_BLOG,
@@ -46,14 +57,15 @@ class SDKController: NSObject {
             sdkCall.getinstance().oauth.authorize(premissions, inSafari: false)
         }else{
             //显示排行榜
-            
+            //显示排行榜
+            OpenRankController.shareInstance().showRankFromScore(self.score)
         }
     }
     
     func analysisResponse(notify:NSNotification) {
         NSNotificationCenter.defaultCenter().removeObserver(kGetUserInfoResponse)
         
-        var sdkcall = sdkCall.getinstance()
+        let sdkcall = sdkCall.getinstance()
         
         //登录
         OpenRankController.shareInstance().login(sdkcall.oauth.openId, appId: APPID, nickName: sdkcall.nickname, logo: sdkcall.logo,block: {
@@ -61,6 +73,8 @@ class SDKController: NSObject {
             //干嘛？
             if backbool {
                 print("block 返回值:\(backbool)")
+                //显示排行榜
+                OpenRankController.shareInstance().showRankFromScore(self.score)
             }
             
         })

@@ -7,11 +7,13 @@
 //
 
 import UIKit
-//宏定义
-let OPENRANKISLOGIN = "OPENRANKISLOGIN"
+ 
 
-class OpenRankController: NSObject {
-var finishClosure:((finish: Bool, name:String ) -> ())?
+public class OpenRankController: NSObject {
+    
+    private var finishClosure:((finish: Bool, name:String ) -> ())?
+    public var appid:String?
+    
     class func shareInstance() -> OpenRankController {
         struct WXSingleton{
             static var predicate:dispatch_once_t = 0  //静态的线程安全
@@ -19,6 +21,10 @@ var finishClosure:((finish: Bool, name:String ) -> ())?
         }
         dispatch_once(&WXSingleton.predicate, {WXSingleton.instance = OpenRankController()})
         return WXSingleton.instance!
+    }
+    
+    override init() {
+        appid = "10000"
     }
     
     //是否已登录
@@ -46,18 +52,44 @@ var finishClosure:((finish: Bool, name:String ) -> ())?
      */
     func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
         
-        var url = NSURL(string: "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)")
+        let url = "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)"
         
-        
-        
-        block(backbool: true)
-        
-        
-        
+        let wxxrequest = WxxHttpRequest()
+        wxxrequest.requestGetFromAsyn(url) { (back) in
+            
+            let result = back.objectForKey("result") as! String;
+            if result == "1"{
+                print("登录成功");
+                NSUserDefaults.standardUserDefaults().setValue(nickName, forKey: OPENRANKUSERNAME)
+                NSUserDefaults.standardUserDefaults().setValue(logo, forKey: OPENRANKUSERLOGO)
+                NSUserDefaults.standardUserDefaults().setValue(openId, forKey: OPENRANKOPENID)
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: OPENRANKISLOGIN)
+                block(backbool: true)
+            }
+            
+        }
     }
     
     
-    
+    /**
+     *  调用本方法在window上弹出在线排行榜
+     *  参数：
+     *      score       ->玩家的最新高分， 服务端会对本分数进行判断，如果低于旧分数不会更新
+     *
+     */
+    func showRankFromScore(score:String){
+        
+        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window{
+            
+            let webVC = WxxWebViewController(score: score)
+            
+            let nav = UINavigationController(rootViewController: webVC)
+            window.rootViewController?.presentViewController(nav, animated: true, completion: { 
+                print("弹出成功")
+            })
+        }
+        
+    }
     
     
     

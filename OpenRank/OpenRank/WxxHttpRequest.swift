@@ -10,7 +10,7 @@ import UIKit
 
 class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
-    typealias blockF =  (back:String)->Void
+    typealias blockF =  (back:AnyObject)->Void
     var blockFunc = blockF?()
     
     func saveScore(score:Int, userid:String) {
@@ -65,7 +65,7 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     }
     
     //异步get
-    func requestGetFromAsyn(urlString:String,block:(back:String)->Void) {
+    func requestGetFromAsyn(urlString:String,block:(back:AnyObject)->Void) {
         if blockFunc != nil{
             blockFunc = nil
         }
@@ -80,21 +80,25 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
     func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
         print("请求成功！");
-        print(response)
-        blockFunc!(back:"s");
+        print(response) 
     }
     
     
     func connection(connection: NSURLConnection, didReceiveData data: NSData)
     {
-        print("请求成功1！");
+        print("返回成功！");
         let datastring = NSString(data:data, encoding: NSUTF8StringEncoding)
         print(datastring)
         //解析 JSON 数据
         do {
             let json : AnyObject! = try NSJSONSerialization.JSONObjectWithData(data,options:NSJSONReadingOptions.AllowFragments)
-            let score = json.objectForKey("score") as! Int
-            print(score)
+//            let score = json.objectForKey("score") as! Int
+//            print(score)
+            let result = json.objectForKey("result") as! String
+//            if let result = json.objectForKey("result") as! Int {
+//
+//            }
+            blockFunc!(back:json);
         }catch let error as NSError{
             //打印错误消息
             print(error.code)
@@ -104,6 +108,6 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
     func connectionDidFinishLoading(connection: NSURLConnection)
     {
-        print("请求成功2！");
+        print("请求结束！");
     }
 }

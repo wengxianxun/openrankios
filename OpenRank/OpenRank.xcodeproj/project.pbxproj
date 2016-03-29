@@ -29,6 +29,7 @@
 		A8AA88931CA4D652004875CF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88921CA4D652004875CF /* CoreTelephony.framework */; };
 		A8AA88951CA4D659004875CF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88941CA4D659004875CF /* libstdc++.tbd */; };
 		A8AA88971CA4D660004875CF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA88961CA4D660004875CF /* libz.tbd */; };
+		A8F7CD5D1CAA1A5000A61894 /* ORConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7CD5C1CAA1A5000A61894 /* ORConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		A8AA88921CA4D652004875CF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A8AA88941CA4D659004875CF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A8AA88961CA4D660004875CF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A8F7CD5C1CAA1A5000A61894 /* ORConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				A8A704E11CA28B0500B6C4FF /* code */,
 				A81BD0EC1CA230BD009D0927 /* Supporting Files */,
 				A81BD0BE1CA22FC1009D0927 /* AppDelegate.swift */,
+				A81BD0C01CA22FC1009D0927 /* ViewController.swift */,
 			);
 			path = OpenRank;
 			sourceTree = "<group>";
@@ -176,7 +179,6 @@
 				A8AA888C1CA4D637004875CF /* SystemConfiguration.framework */,
 				A8AA888A1CA4D62F004875CF /* libiconv.tbd */,
 				A8AA88881CA4D623004875CF /* Security.framework */,
-				A81BD0C01CA22FC1009D0927 /* ViewController.swift */,
 				A81BD0C21CA22FC1009D0927 /* Main.storyboard */,
 				A81BD0C51CA22FC1009D0927 /* Assets.xcassets */,
 				A81BD0C71CA22FC1009D0927 /* LaunchScreen.storyboard */,
@@ -208,6 +210,7 @@
 				A8A704E41CA28B1800B6C4FF /* controller */,
 				A8A704E31CA28B1300B6C4FF /* view */,
 				A8A704E21CA28B0C00B6C4FF /* model */,
+				A8F7CD5C1CAA1A5000A61894 /* ORConfig.swift */,
 			);
 			name = code;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				A8A704E61CA28C0F00B6C4FF /* OpenRankController.swift in Sources */,
 				0948C6061CA2E03700124509 /* WxxWebViewController.swift in Sources */,
 				A8AA88871CA4D47B004875CF /* sdkCall.m in Sources */,
+				A8F7CD5D1CAA1A5000A61894 /* ORConfig.swift in Sources */,
 				A81BD0C11CA22FC1009D0927 /* ViewController.swift in Sources */,
 				A8453ECB1CA3D4E300D80A79 /* SDKController.swift in Sources */,
 				A81BD0BF1CA22FC1009D0927 /* AppDelegate.swift in Sources */,

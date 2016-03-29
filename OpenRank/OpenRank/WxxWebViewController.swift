@@ -35,12 +35,36 @@ extension wkUIdelegate{
 
 class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
 
-    var wk:WKWebView!
+    var score:String? //分数
+    private var wk:WKWebView!
+    
+    //便利构造器
+    convenience init(score:String){
+        self.init()
+        self.score = score
+        
+        
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view.
+        
+        let leftBtn = UIBarButtonItem(title: "退出", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
+        self.navigationItem.leftBarButtonItem = leftBtn
+        
+        self.wk = WKWebView(frame: self.view.frame)
+        self.wk.navigationDelegate = self
+        self.wk.UIDelegate = self
+        self.view.addSubview(self.wk)
+        //加载分数排行
+        let openid = NSUserDefaults.standardUserDefaults().valueForKey(OPENRANKOPENID) as! String
+        let appid = OpenRankController.shareInstance().appid!
+        let score = self.score!
+        let url = "http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\(openid)&app_id=\(appid)&score_score=\(score)"
+        self.wk.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,14 +75,16 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.wk = WKWebView(frame: self.view.frame)
-        self.wk.navigationDelegate = self
-        self.wk.UIDelegate = self
-        self.wk.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.baidu.com")!))
-        self.view.addSubview(self.wk)
+        
+        
+        
     }
     
-    
+    func closeSelf() {
+        self.dismissViewControllerAnimated(true) { 
+            print("排行榜界面->退出成功!");
+        }
+    }
 
     /*
     // MARK: - Navigation
