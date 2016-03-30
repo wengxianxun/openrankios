@@ -37,6 +37,7 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
 
     var score:String? //分数
     private var wk:WKWebView!
+    private var progressView: UIProgressView!
     
     //便利构造器
     convenience init(score:String){
@@ -59,11 +60,16 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         self.wk.navigationDelegate = self
         self.wk.UIDelegate = self
         self.view.addSubview(self.wk)
+        
         //加载分数排行
-        let openid = NSUserDefaults.standardUserDefaults().valueForKey(OPENRANKOPENID) as! String
-        let appid = OpenRankController.shareInstance().appid!
+        var openid = NSUserDefaults.standardUserDefaults().valueForKey(OPENRANKOPENID) as? String
+        
+        openid = openid != nil ? openid : ""
+        
+        let appid = OpenRankController.shareInstance().appId!
         let score = self.score!
-        let url = "http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\(openid)&app_id=\(appid)&score_score=\(score)"
+        let url = "http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\(openid!)&app_id=\(appid)&score_score=\(score)"
+        WxxLog.DEBUG(url)
         self.wk.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
 
@@ -71,13 +77,51 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.wk.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.wk.removeObserver(self, forKeyPath: "estimatedProgress")
+    }
+    //MARK: KVO
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        guard let keyPath = keyPath else {return}
+        switch keyPath {
+        case "estimatedProgress":
+            if let newValue = change?[NSKeyValueChangeNewKey] as? NSNumber {
+                progressChanged(newValue)
+            }
+        default:
+            print("")
+        }
+    }
+    
+    private func progressChanged(newValue: NSNumber) {
+        if progressView == nil {
+            progressView = UIProgressView()
+            progressView.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(progressView)
+            
+            self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-0-[progressView]-0-|", options: [], metrics: nil, views: ["progressView": progressView]))
+            self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[topGuide]-0-[progressView(2)]", options: [], metrics: nil, views: ["progressView": progressView, "topGuide": self.topLayoutGuide]))
+        }
         
-        
-        
-        
+        progressView.progress = newValue.floatValue
+        if progressView.progress == 1 {
+            progressView.progress = 0
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.progressView.alpha = 0
+            })
+        } else if progressView.alpha == 0 {
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.progressView.alpha = 1
+            })
+        }
     }
     
     func closeSelf() {

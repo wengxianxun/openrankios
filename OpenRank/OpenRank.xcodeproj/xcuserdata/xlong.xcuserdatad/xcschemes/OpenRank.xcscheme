@@ -48,6 +48,16 @@
                ReferencedContainer = "container:OpenRank.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8BCCAD21CABD3D2002C8BD4"
+               BuildableName = "OpenRankFrameworkTests.xctest"
+               BlueprintName = "OpenRankFrameworkTests"
+               ReferencedContainer = "container:OpenRank.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -7,12 +7,27 @@
 //
 
 import UIKit
- 
 
-public class OpenRankController: NSObject {
+//协议
+protocol OpenrankProtocol {
+    //单例
+    static func shareInstance() -> OpenRankController
+    
+    //初始化sdk
+    func initAppId(appId:String)
+    
+    //是否登录
+    func isLogin()->Bool
+    //登录
+    func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void)
+    //显示排行榜
+    func showRankFromScore(score:String)
+}
+
+public class OpenRankController: NSObject,OpenrankProtocol {
     
     private var finishClosure:((finish: Bool, name:String ) -> ())?
-    public var appid:String?
+    public var appId:String?
     
     class func shareInstance() -> OpenRankController {
         struct WXSingleton{
@@ -24,7 +39,11 @@ public class OpenRankController: NSObject {
     }
     
     override init() {
-        appid = "10000"
+        
+    }
+    
+    func initAppId(appId: String) {
+        self.appId = appId
     }
     
     //是否已登录
@@ -78,16 +97,16 @@ public class OpenRankController: NSObject {
      *
      */
     func showRankFromScore(score:String){
-        
-        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window{
-            
-            let webVC = WxxWebViewController(score: score)
-            
-            let nav = UINavigationController(rootViewController: webVC)
-            window.rootViewController?.presentViewController(nav, animated: true, completion: { 
-                print("弹出成功")
-            })
-        }
+//        WxxLog.PRINT("开始请求分数排行榜");
+//        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window{
+//            
+//            let webVC = WxxWebViewController(score: score)
+//            
+//            let nav = UINavigationController(rootViewController: webVC)
+//            window.rootViewController?.presentViewController(nav, animated: true, completion: { 
+//                print("弹出成功")
+//            })
+//        }
         
     }
     

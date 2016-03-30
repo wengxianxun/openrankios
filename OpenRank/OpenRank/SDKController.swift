@@ -9,7 +9,7 @@
 import UIKit
 
 
-let APPID = "10000"
+let APPID = "a1b516e2c4a282c3f281a30b5b9237bb"
 class SDKController: NSObject {
 
     var score:String = "0"
@@ -28,6 +28,8 @@ class SDKController: NSObject {
     override init() {
         super.init()
         self.score = "66666666";
+        //初始化
+        OpenRankController.shareInstance().initAppId(APPID)
     }
     
     func showRank() {
@@ -39,7 +41,7 @@ class SDKController: NSObject {
          
         if !OpenRankController.shareInstance().isLogin()  {
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "analysisResponse:", name: kGetUserInfoResponse, object: sdkCall.getinstance())
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SDKController.analysisResponse(_:)), name: kGetUserInfoResponse, object: sdkCall.getinstance())
             let premissions = [kOPEN_PERMISSION_GET_USER_INFO,
                                kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
                                kOPEN_PERMISSION_ADD_ALBUM,
