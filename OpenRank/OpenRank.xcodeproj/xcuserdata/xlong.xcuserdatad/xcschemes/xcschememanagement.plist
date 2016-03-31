@@ -9,12 +9,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>OpenRankFramework.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>OpenRankSDK.xcscheme</key>
+		<key>OpenRankKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -33,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>A81BD0D91CA22FC1009D0927</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A87D72321CAD05D200E0BCE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A87D724B1CAD0BA700E0BCE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

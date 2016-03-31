@@ -10,13 +10,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRank/WxxWebViewController.swift"
-            timestampString = "481019992.868645"
+            timestampString = "481110368.10356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "userContentController(_:didReceiveScriptMessage:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.WxxWebViewController.userContentController (__ObjC.WKUserContentController, didReceiveScriptMessage : __ObjC.WKScriptMessage) -&gt; ()"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxWebViewController.swift"
+                  timestampString = "481110369.251321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.WxxWebViewController.userContentController (__ObjC.WKUserContentController, didReceiveScriptMessage : __ObjC.WKScriptMessage) -&gt; ()"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxWebViewController.swift"
+                  timestampString = "481110369.251579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +58,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRank/WxxWebViewController.swift"
-            timestampString = "481019996.140538"
+            timestampString = "481110368.10356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "userContentController(_:didReceiveScriptMessage:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.WxxWebViewController.userContentController (__ObjC.WKUserContentController, didReceiveScriptMessage : __ObjC.WKScriptMessage) -&gt; ()"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxWebViewController.swift"
+                  timestampString = "481110369.252415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.WxxWebViewController.userContentController (__ObjC.WKUserContentController, didReceiveScriptMessage : __ObjC.WKScriptMessage) -&gt; ()"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxWebViewController.swift"
+                  timestampString = "481110369.252522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

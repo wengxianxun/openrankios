@@ -29,7 +29,7 @@ public class OpenRankController: NSObject,OpenrankProtocol {
     private var finishClosure:((finish: Bool, name:String ) -> ())?
     public var appId:String?
     
-    class func shareInstance() -> OpenRankController {
+    public class func shareInstance() -> OpenRankController {
         struct WXSingleton{
             static var predicate:dispatch_once_t = 0  //静态的线程安全
             static var instance:OpenRankController? = nil //可选静态类
@@ -42,12 +42,17 @@ public class OpenRankController: NSObject,OpenrankProtocol {
         
     }
     
-    func initAppId(appId: String) {
+    /**
+     * 初始化appid
+     */
+    public func initAppId(appId: String) {
         self.appId = appId
     }
     
-    //是否已登录
-    func isLogin()->Bool{
+    /**
+     * 是否已登录
+     */
+    public func isLogin()->Bool{
         return NSUserDefaults.standardUserDefaults().boolForKey(OPENRANKISLOGIN)
     }
     
@@ -61,15 +66,7 @@ public class OpenRankController: NSObject,OpenrankProtocol {
      *      score       ->玩家的最新高分， 服务端会对本分数进行判断，如果低于旧分数不会更新
      *
      */
-    /**
-     *  外部使用方式
-        OpenRankController.shareInstance().login("123", appId: "123", nickName: "你好", headUrl: "http:",block: {
-            (back)->Void in
-            //干嘛？
-            print("block 返回值:\(back)")
-        })
-     */
-    func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
+    public func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
         
         let url = "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)"
         
@@ -96,17 +93,17 @@ public class OpenRankController: NSObject,OpenrankProtocol {
      *      score       ->玩家的最新高分， 服务端会对本分数进行判断，如果低于旧分数不会更新
      *
      */
-    func showRankFromScore(score:String){
-//        WxxLog.PRINT("开始请求分数排行榜");
-//        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window{
-//            
-//            let webVC = WxxWebViewController(score: score)
-//            
-//            let nav = UINavigationController(rootViewController: webVC)
-//            window.rootViewController?.presentViewController(nav, animated: true, completion: { 
-//                print("弹出成功")
-//            })
-//        }
+    public func showRankFromScore(score:String){
+        WxxLog.PRINT("开始请求分数排行榜");
+        if let app = UIApplication.sharedApplication().delegate, let window = app.window!{
+            
+            let webVC = WxxWebViewController(score: score)
+            
+            let nav = UINavigationController(rootViewController: webVC)
+            window.rootViewController?.presentViewController(nav, animated: true, completion: { 
+                WxxLog.PRINT("排行榜界面")
+            })
+        }
         
     }
     

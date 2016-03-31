@@ -33,20 +33,20 @@ extension wkUIdelegate{
     }
 }
 
-class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
+class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler {
 
     var score:String? //分数
     private var wk:WKWebView!
+    private var config:WKWebViewConfiguration!
     private var progressView: UIProgressView!
     
     //便利构造器
     convenience init(score:String){
         self.init()
+        //初始化分数
         self.score = score
-        
-        
-
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +56,25 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         let leftBtn = UIBarButtonItem(title: "退出", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
         self.navigationItem.leftBarButtonItem = leftBtn
         
-        self.wk = WKWebView(frame: self.view.frame)
+        self.initWebView()
+        self.loadHtmlRequest()
+    }
+
+    func initWebView(){
+        
+        config = WKWebViewConfiguration()
+        //注册js方法
+        config.userContentController.addScriptMessageHandler(self, name:"webViewApp")
+        self.wk = WKWebView(frame: self.view.frame, configuration: config)
         self.wk.navigationDelegate = self
         self.wk.UIDelegate = self
         self.view.addSubview(self.wk)
+    }
+    func loadHtmlRequest(){
         
+        if self.wk == nil{
+            return
+        }
         //加载分数排行
         var openid = NSUserDefaults.standardUserDefaults().valueForKey(OPENRANKOPENID) as? String
         
@@ -72,7 +86,13 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         WxxLog.DEBUG(url)
         self.wk.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
-
+    
+    func rightBtn(){
+        
+        let leftBtn = UIBarButtonItem(title: "登录", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
+        self.navigationItem.rightBarButtonItem = leftBtn
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -98,6 +118,18 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
             }
         default:
             print("")
+        }
+    }
+    
+    
+    //实现js调用ios的handle委托
+    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
+        //接受传过来的消息从而决定app调用的方法
+        let dict = message.body as! Dictionary<String,String>
+        let jsfunc:String = dict["jsfunc"]!
+        
+        if jsfunc=="nologin"{//未登录显示登录按钮
+            self.rightBtn()
         }
     }
     
