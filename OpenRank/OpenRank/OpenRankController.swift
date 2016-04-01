@@ -10,7 +10,7 @@ import UIKit
 
 public enum OpenRankEnum{
     
-    case LoginEnum       //登录
+    case LoginEnum       //登录,开发者可设置自定义登录界面，
     case OutRankViewEnum //退出排行榜界面
 }
 
@@ -63,6 +63,13 @@ public class OpenRankController: NSObject,OpenrankProtocol {
         return NSUserDefaults.standardUserDefaults().boolForKey(OPENRANKISLOGIN)
     }
     
+    func logout() {
+        NSUserDefaults.standardUserDefaults().setValue("", forKey: OPENRANKUSERNAME)
+        NSUserDefaults.standardUserDefaults().setValue("", forKey: OPENRANKUSERLOGO)
+        NSUserDefaults.standardUserDefaults().setValue("", forKey: OPENRANKOPENID)
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: OPENRANKISLOGIN)
+    }
+    
     /**
      *  登录用户数据   注：openrank目前只存储开发者提供的用户数据（包括第三方：QQ，微博，微信等），不单独提供新用户注册系统
      *  参数：
@@ -88,6 +95,12 @@ public class OpenRankController: NSObject,OpenrankProtocol {
                 NSUserDefaults.standardUserDefaults().setValue(openId, forKey: OPENRANKOPENID)
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: OPENRANKISLOGIN)
                 block(backbool: true)
+                
+                
+                NSNotificationCenter.defaultCenter().postNotificationName(kLOGINSUCCESSNOTIFACATION, object: nil)
+                self.showRankFromScore("", block: { (ORenum) in
+                    
+                })
             }
             
         }

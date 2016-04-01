@@ -10,3 +10,5 @@ let OPENRANKISLOGIN     =   "OPENRANKISLOGIN" //是否已登录
 let OPENRANKOPENID      =   "openrankopenid"
 let OPENRANKUSERNAME    =   "openrankusername"
 let OPENRANKUSERLOGO    =   "openrankuserlogo"
+
+let kLOGINSUCCESSNOTIFACATION = "kLOGINSUCCESSNOTIFACATION"

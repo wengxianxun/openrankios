@@ -50,10 +50,10 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
         
-        let leftBtn = UIBarButtonItem(title: "退出", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
+        let leftBtn = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
         self.navigationItem.leftBarButtonItem = leftBtn
         
         self.initWebView()
@@ -96,14 +96,18 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         //登录 回调给开发者自己调用？
         //还是内置实现多平台登录？
         self.closeSelf()
+        
+        
         OpenRankController.shareInstance().htmlViewBlock!(ORenum: OpenRankEnum.LoginEnum)
     }
     func logout(){
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: OPENRANKISLOGIN)
         
+        OpenRankController.shareInstance().logout()
+        
+        self.rightBtn("登录",action:#selector(WxxWebViewController.login))
         let ac = UIAlertController(title: "提示", message: "您已退出登录", preferredStyle: UIAlertControllerStyle.Alert)
         ac.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (aa) -> Void in
-             
+            
         }))
         self.presentViewController(ac, animated: true, completion: nil)
     }
@@ -114,10 +118,12 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(animated: Bool) {
+        print("viewDidAppear%f---%f",self.view.frame.size.width,self.view.frame.size.height)
         super.viewDidAppear(animated)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        print("viewWillAppear%f---%f",self.view.frame.size.width,self.view.frame.size.height)
         self.wk.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
     }
     override func viewWillDisappear(animated: Bool) {
@@ -137,6 +143,16 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         }
     }
     
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        if UIInterfaceOrientationIsLandscape(fromInterfaceOrientation) {
+            WxxLog.PRINT("横屏");
+            self.wk.frame = self.view.frame
+        }else{
+            WxxLog.PRINT("竖屏");
+            self.wk.frame = self.view.frame
+        }
+    }
     
     //实现js调用ios的handle委托
     func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {

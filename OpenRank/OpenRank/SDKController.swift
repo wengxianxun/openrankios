@@ -38,7 +38,8 @@ class SDKController: NSObject {
             switch ORenum{
                 case .LoginEnum:
                     //登录
-                    LoginViewController.showLoginVC()
+                    //注：开发者可直接使用loginviewcontroller界面来作为登录界面，也可以自己实现登录界面，如果有嵌入sharesdk可以直接使用sharesdk
+                    
                     break
                 case .OutRankViewEnum:
                     //退出
@@ -65,6 +66,7 @@ class SDKController: NSObject {
                     print("block 返回值:\(backbool)")
                     //显示排行榜
                     //                OpenRankController.shareInstance().showRankFromScore(self.score)
+                    
                 }
                 
             })

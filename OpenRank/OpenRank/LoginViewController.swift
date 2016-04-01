@@ -13,39 +13,6 @@ class LoginViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     let dic = [0:(title:"QQ登录",logo:"sns_icon_24.png"),1:(title:"Sina微博登录",logo:"sns_icon_1.png")]
     var tableView = UITableView()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
-        // Do any additional setup after loading the view.
-    
-        tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Plain)
-        tableView.dataSource = self;
-        tableView.delegate = self;
-        self.view.addSubview(tableView)
-//        let qqlogin = UIButton(frame: CGRect(x: 150, y: 150, width: 90, height: 45))
-//        qqlogin.setTitle("QQ登录", forState: UIControlState.Normal)
-//        qqlogin.backgroundColor = UIColor.grayColor()
-//        qqlogin.addTarget(self, action: #selector(ViewController.login), forControlEvents: UIControlEvents.TouchUpInside)
-//        self.view.addSubview(qqlogin)
-//        
-//        
-//        let sinalogin = UIButton(frame: CGRect(x: 150, y: 150, width: 90, height: 45))
-//        sinalogin.setTitle("sina微博登录", forState: UIControlState.Normal)
-//        sinalogin.backgroundColor = UIColor.grayColor()
-//        sinalogin.addTarget(self, action: #selector(ViewController.login), forControlEvents: UIControlEvents.TouchUpInside)
-//        self.view.addSubview(sinalogin)
-    }
-    
-    func qqlogin(){
-        
-        SDKController.shareInstance().qqlogin()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     class func showLoginVC(){
         
         WxxLog.PRINT("多平台登录");
@@ -59,6 +26,39 @@ class LoginViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             })
         }
     }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
+        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.closeSelf), name: kLOGINSUCCESSNOTIFACATION, object: nil)
+        
+        let leftBtn = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LoginViewController.closeSelf))
+        self.navigationItem.leftBarButtonItem = leftBtn
+        
+        tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Plain)
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        self.view.addSubview(tableView)
+    }
+    
+    func qqlogin(){
+        
+        SDKController.shareInstance().qqlogin()
+    }
+
+    func closeSelf() {
+        self.dismissViewControllerAnimated(true) {
+            WxxLog.PRINT("登录界面->退出成功!");
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     
     
     // MARK: -uitableview
