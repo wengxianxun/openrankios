@@ -87,11 +87,27 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         self.wk.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
     
-    func rightBtn(){
+    func rightBtn(title:String,action:Selector){
         
-        let leftBtn = UIBarButtonItem(title: "登录", style: UIBarButtonItemStyle.Done, target: self, action: #selector(WxxWebViewController.closeSelf))
+        let leftBtn = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Done, target: self, action: action)
         self.navigationItem.rightBarButtonItem = leftBtn
     }
+    func login() {
+        //登录 回调给开发者自己调用？
+        //还是内置实现多平台登录？
+        self.closeSelf()
+        OpenRankController.shareInstance().htmlViewBlock!(ORenum: OpenRankEnum.LoginEnum)
+    }
+    func logout(){
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: OPENRANKISLOGIN)
+        
+        let ac = UIAlertController(title: "提示", message: "您已退出登录", preferredStyle: UIAlertControllerStyle.Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (aa) -> Void in
+             
+        }))
+        self.presentViewController(ac, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -129,7 +145,9 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         let jsfunc:String = dict["jsfunc"]!
         
         if jsfunc=="nologin"{//未登录显示登录按钮
-            self.rightBtn()
+            self.rightBtn("登录",action:#selector(WxxWebViewController.login))
+        }else if jsfunc=="islogin"{
+            self.rightBtn("退出登录", action: #selector(WxxWebViewController.logout))
         }
     }
     

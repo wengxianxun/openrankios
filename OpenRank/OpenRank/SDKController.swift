@@ -33,12 +33,46 @@ class SDKController: NSObject {
     }
     
     func showRank() {
-        OpenRankController.shareInstance().showRankFromScore(self.score)
+        OpenRankController.shareInstance().showRankFromScore(self.score,block: {
+            (ORenum)->Void in
+            switch ORenum{
+                case .LoginEnum:
+                    //登录
+                    LoginViewController.showLoginVC()
+                    break
+                case .OutRankViewEnum:
+                    //退出
+                    break
+            }
+        })
+    }
+    
+    func pushLoginVC(){
+        
+        
+        
     }
     
     //登录
     func login(){
-         
+        
+            let sdkcall = sdkCall.getinstance()
+            //登录
+            OpenRankController.shareInstance().login(sdkcall.oauth.openId, appId: APPID, nickName: sdkcall.nickname, logo: sdkcall.logo,block: {
+                (backbool)->Void in
+                //干嘛？
+                if backbool {
+                    print("block 返回值:\(backbool)")
+                    //显示排行榜
+                    //                OpenRankController.shareInstance().showRankFromScore(self.score)
+                }
+                
+            })
+    }
+    
+    
+    func qqlogin(){
+        
         if !OpenRankController.shareInstance().isLogin()  {
             
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SDKController.analysisResponse(_:)), name: kGetUserInfoResponse, object: sdkCall.getinstance())
@@ -58,28 +92,13 @@ class SDKController: NSObject {
             
             sdkCall.getinstance().oauth.authorize(premissions, inSafari: false)
         }else{
-            //显示排行榜
-            //显示排行榜
-            OpenRankController.shareInstance().showRankFromScore(self.score)
         }
     }
     
     func analysisResponse(notify:NSNotification) {
         NSNotificationCenter.defaultCenter().removeObserver(kGetUserInfoResponse)
         
-        let sdkcall = sdkCall.getinstance()
-        
-        //登录
-        OpenRankController.shareInstance().login(sdkcall.oauth.openId, appId: APPID, nickName: sdkcall.nickname, logo: sdkcall.logo,block: {
-            (backbool)->Void in
-            //干嘛？
-            if backbool {
-                print("block 返回值:\(backbool)")
-                //显示排行榜
-                OpenRankController.shareInstance().showRankFromScore(self.score)
-            }
-            
-        })
+        self.login()
     }
     
 }

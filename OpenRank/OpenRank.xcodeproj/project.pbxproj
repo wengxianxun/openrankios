@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0948C6061CA2E03700124509 /* WxxWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948C6051CA2E03700124509 /* WxxWebViewController.swift */; };
+		A80A01CD1CAE11320070527E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A01CC1CAE11320070527E /* LoginViewController.swift */; };
+		A80A01D41CAE21D40070527E /* sns_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A80A01D01CAE21D40070527E /* sns_icon_1.png */; };
+		A80A01D51CAE21D40070527E /* sns_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A80A01D11CAE21D40070527E /* sns_icon_1@2x.png */; };
+		A80A01D61CAE21D40070527E /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A80A01D21CAE21D40070527E /* sns_icon_24.png */; };
+		A80A01D71CAE21D40070527E /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A80A01D31CAE21D40070527E /* sns_icon_24@2x.png */; };
 		A81BD0BF1CA22FC1009D0927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BD0BE1CA22FC1009D0927 /* AppDelegate.swift */; };
 		A81BD0C11CA22FC1009D0927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BD0C01CA22FC1009D0927 /* ViewController.swift */; };
 		A81BD0C41CA22FC1009D0927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81BD0C21CA22FC1009D0927 /* Main.storyboard */; };
@@ -83,6 +88,11 @@
 
 /* Begin PBXFileReference section */
 		0948C6051CA2E03700124509 /* WxxWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WxxWebViewController.swift; sourceTree = "<group>"; };
+		A80A01CC1CAE11320070527E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A80A01D01CAE21D40070527E /* sns_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_1.png; sourceTree = "<group>"; };
+		A80A01D11CAE21D40070527E /* sns_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_1@2x.png"; sourceTree = "<group>"; };
+		A80A01D21CAE21D40070527E /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_24.png; sourceTree = "<group>"; };
+		A80A01D31CAE21D40070527E /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_24@2x.png"; sourceTree = "<group>"; };
 		A81BD0BB1CA22FC0009D0927 /* OpenRank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenRank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81BD0BE1CA22FC1009D0927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A81BD0C01CA22FC1009D0927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +173,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80A01CA1CAE10FD0070527E /* othercode */ = {
+			isa = PBXGroup;
+			children = (
+				A80A01CB1CAE11110070527E /* controller */,
+			);
+			name = othercode;
+			sourceTree = "<group>";
+		};
+		A80A01CB1CAE11110070527E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A80A01CF1CAE21C90070527E /* image */,
+				A8453ECA1CA3D4E300D80A79 /* SDKController.swift */,
+				A80A01CC1CAE11320070527E /* LoginViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		A80A01CE1CAE21BE0070527E /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		A80A01CF1CAE21C90070527E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A80A01D01CAE21D40070527E /* sns_icon_1.png */,
+				A80A01D11CAE21D40070527E /* sns_icon_1@2x.png */,
+				A80A01D21CAE21D40070527E /* sns_icon_24.png */,
+				A80A01D31CAE21D40070527E /* sns_icon_24@2x.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		A81BD0B21CA22FC0009D0927 = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				A8AA887D1CA4D359004875CF /* objc */,
-				A8A704E11CA28B0500B6C4FF /* code */,
+				A8A704E11CA28B0500B6C4FF /* sdkcode */,
+				A80A01CA1CAE10FD0070527E /* othercode */,
 				A81BD0EC1CA230BD009D0927 /* Supporting Files */,
 				A81BD0BE1CA22FC1009D0927 /* AppDelegate.swift */,
 				A81BD0C01CA22FC1009D0927 /* ViewController.swift */,
@@ -261,16 +308,17 @@
 			path = OpenRankKit;
 			sourceTree = "<group>";
 		};
-		A8A704E11CA28B0500B6C4FF /* code */ = {
+		A8A704E11CA28B0500B6C4FF /* sdkcode */ = {
 			isa = PBXGroup;
 			children = (
+				A80A01CE1CAE21BE0070527E /* image */,
 				A8453ECC1CA3DAF600D80A79 /* UTIL */,
 				A8A704E41CA28B1800B6C4FF /* controller */,
 				A8A704E31CA28B1300B6C4FF /* view */,
 				A8A704E21CA28B0C00B6C4FF /* model */,
 				A8F7CD5C1CAA1A5000A61894 /* ORConfig.swift */,
 			);
-			name = code;
+			name = sdkcode;
 			sourceTree = "<group>";
 		};
 		A8A704E21CA28B0C00B6C4FF /* model */ = {
@@ -292,7 +340,6 @@
 			children = (
 				A8A704E51CA28C0F00B6C4FF /* OpenRankController.swift */,
 				0948C6051CA2E03700124509 /* WxxWebViewController.swift */,
-				A8453ECA1CA3D4E300D80A79 /* SDKController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -465,8 +512,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80A01D71CAE21D40070527E /* sns_icon_24@2x.png in Resources */,
+				A80A01D61CAE21D40070527E /* sns_icon_24.png in Resources */,
 				A8AA88811CA4D46F004875CF /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				A81BD0C91CA22FC1009D0927 /* LaunchScreen.storyboard in Resources */,
+				A80A01D51CAE21D40070527E /* sns_icon_1@2x.png in Resources */,
+				A80A01D41CAE21D40070527E /* sns_icon_1.png in Resources */,
 				A81BD0C61CA22FC1009D0927 /* Assets.xcassets in Resources */,
 				A81BD0C41CA22FC1009D0927 /* Main.storyboard in Resources */,
 			);
@@ -510,6 +561,7 @@
 				A8453ECF1CA3DB3700D80A79 /* WxxHttpRequest.swift in Sources */,
 				A87D72611CAD119500E0BCE2 /* OpenRankAPIRequest.swift in Sources */,
 				A8BCCAB11CABB5E1002C8BD4 /* WxxLog.swift in Sources */,
+				A80A01CD1CAE11320070527E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +898,7 @@
 				A87D72571CAD0BA700E0BCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

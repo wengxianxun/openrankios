@@ -8,6 +8,12 @@
 
 import UIKit
 
+public enum OpenRankEnum{
+    
+    case LoginEnum       //登录
+    case OutRankViewEnum //退出排行榜界面
+}
+
 //协议
 protocol OpenrankProtocol {
     //单例
@@ -21,12 +27,13 @@ protocol OpenrankProtocol {
     //登录
     func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void)
     //显示排行榜
-    func showRankFromScore(score:String)
+    func showRankFromScore(score:String,block:(ORenum:OpenRankEnum)->Void)
 }
 
 public class OpenRankController: NSObject,OpenrankProtocol {
     
     private var finishClosure:((finish: Bool, name:String ) -> ())?
+    internal var htmlViewBlock:((ORenum:OpenRankEnum)->Void)?
     public var appId:String?
     
     public class func shareInstance() -> OpenRankController {
@@ -93,9 +100,11 @@ public class OpenRankController: NSObject,OpenrankProtocol {
      *      score       ->玩家的最新高分， 服务端会对本分数进行判断，如果低于旧分数不会更新
      *
      */
-    public func showRankFromScore(score:String){
+    public func showRankFromScore(score:String,block:(ORenum:OpenRankEnum)->Void){
         WxxLog.PRINT("开始请求分数排行榜");
         if let app = UIApplication.sharedApplication().delegate, let window = app.window!{
+            
+            htmlViewBlock = block
             
             let webVC = WxxWebViewController(score: score)
             
