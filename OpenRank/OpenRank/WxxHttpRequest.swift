@@ -66,16 +66,52 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
     
     //异步get
     func requestGetFromAsyn(urlString:String,block:(back:AnyObject)->Void) {
-        if blockFunc != nil{
-            blockFunc = nil
-        }
-        blockFunc = block;
-        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+//        if blockFunc != nil{
+//            blockFunc = nil
+//        }
+//        
+//        blockFunc = block;
+        
+        let url =  NSURL(string: urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+        
+        let request = NSMutableURLRequest(URL:url)
         request.HTTPMethod = "GET"
-        var conn:NSURLConnection!
-        conn = NSURLConnection(request: request,delegate: self)
-        conn.start()
-        print(conn)
+        request.timeoutInterval = 120 //超时
+//        var conn:NSURLConnection!
+//        conn = NSURLConnection(request: request,delegate: self)
+//        conn.start()
+//        print(conn)
+        
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { (data, respone, error) in
+            if error == nil{
+                
+                print("返回成功！");
+                let datastring = NSString(data:data!, encoding: NSUTF8StringEncoding)
+                print(datastring)
+                //解析 JSON 数据
+                do {
+                    let json : AnyObject! = try NSJSONSerialization.JSONObjectWithData(data!,options:NSJSONReadingOptions.AllowFragments)
+                    //            let score = json.objectForKey("score") as! Int
+                    //            print(score)
+                    //            let result = json.objectForKey("result") as! String
+                    //            if let result = json.objectForKey("result") as! Int {
+                    //
+                    //            }
+                    block(back:json);
+                }catch let error as NSError{
+                    //打印错误消息
+                    print(error.code)
+                    print(error.description)
+                }
+            }else{
+                print(error!.code)
+                print(error!.description)
+            }
+        }
+        
+        task.resume()
     }
     
     func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
@@ -94,7 +130,7 @@ class WxxHttpRequest: NSObject,NSURLConnectionDataDelegate {
             let json : AnyObject! = try NSJSONSerialization.JSONObjectWithData(data,options:NSJSONReadingOptions.AllowFragments)
 //            let score = json.objectForKey("score") as! Int
 //            print(score)
-            let result = json.objectForKey("result") as! String
+//            let result = json.objectForKey("result") as! String
 //            if let result = json.objectForKey("result") as! Int {
 //
 //            }

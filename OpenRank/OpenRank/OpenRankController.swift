@@ -8,16 +8,16 @@
 
 import UIKit
 
-public enum OpenRankEnum{
+public enum OpenRankEnum:Int{
     
-    case LoginEnum       //登录,开发者可设置自定义登录界面，
-    case OutRankViewEnum //退出排行榜界面
+    case LoginEnum = 0      //登录,开发者可设置自定义登录界面，
+    case OutRankViewEnum = 1 //退出排行榜界面
 }
 
 //协议
 protocol OpenrankProtocol {
     //单例
-    static func shareInstance() -> OpenRankController
+//    static func shareInstance() -> OpenRankController
     
     //初始化sdk
     func initAppId(appId:String)
@@ -28,22 +28,38 @@ protocol OpenrankProtocol {
     func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void)
     //显示排行榜
     func showRankFromScore(score:String,block:(ORenum:OpenRankEnum)->Void)
+    
+    //显示排行榜
+    func showRankFromScoreToObjectC(score:String,block:(ORenum:Int)->Void)
 }
 
-public class OpenRankController: NSObject,OpenrankProtocol {
+@objc public class OpenRankController: NSObject,OpenrankProtocol {
     
     private var finishClosure:((finish: Bool, name:String ) -> ())?
-    internal var htmlViewBlock:((ORenum:OpenRankEnum)->Void)?
+    public var htmlViewBlock:((ORenum:OpenRankEnum)->Void)?
     public var appId:String?
     
-    public class func shareInstance() -> OpenRankController {
-        struct WXSingleton{
-            static var predicate:dispatch_once_t = 0  //静态的线程安全
-            static var instance:OpenRankController? = nil //可选静态类
+    class var swiftSharedInstance: OpenRankController {
+        struct Singleton {
+            static let instance = OpenRankController()
         }
-        dispatch_once(&WXSingleton.predicate, {WXSingleton.instance = OpenRankController()})
-        return WXSingleton.instance!
+        return Singleton.instance
     }
+    
+    // the sharedInstance class method can be reached from ObjC
+    public class func shareInstance() -> OpenRankController {
+        return OpenRankController.swiftSharedInstance
+    }
+//    public static let shareInstacea = OpenRankController()
+//    public class func shareInstance() -> OpenRankController {
+////        struct WXSingleton{
+////            static var predicate:dispatch_once_t = 0  //静态的线程安全
+////            static var instance:OpenRankController? = nil //可选静态类
+////        }
+////        dispatch_once(&WXSingleton.predicate, {WXSingleton.instance = OpenRankController()})
+////        return WXSingleton.instance!
+//        return shareInstacea;
+//    }
     
     override init() {
         
@@ -83,7 +99,7 @@ public class OpenRankController: NSObject,OpenrankProtocol {
     public func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
         
         let url = "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)"
-        
+        WxxLog.DEBUG("登录url:\(url)")
         let wxxrequest = WxxHttpRequest()
         wxxrequest.requestGetFromAsyn(url) { (back) in
             
@@ -129,6 +145,13 @@ public class OpenRankController: NSObject,OpenrankProtocol {
         
     }
     
+    
+    public func showRankFromScoreToObjectC(score:String,block:(ORenum:Int)->Void){
+        self.showRankFromScore(score, block: {(ORenum)->Void in
+            block(ORenum: ORenum.rawValue)
+        })
+        
+    }
     
     
     

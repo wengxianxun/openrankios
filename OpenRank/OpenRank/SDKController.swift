@@ -39,7 +39,7 @@ class SDKController: NSObject {
                 case .LoginEnum:
                     //登录
                     //注：开发者可直接使用loginviewcontroller界面来作为登录界面，也可以自己实现登录界面，如果有嵌入sharesdk可以直接使用sharesdk
-                    
+                    LoginViewController.showLoginVC()
                     break
                 case .OutRankViewEnum:
                     //退出

@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let dic = [0:(title:"QQ登录",logo:"sns_icon_24.png"),1:(title:"Sina微博登录",logo:"sns_icon_1.png")]
+    let dic = [0:(title:"QQ登录",logo:"sns_icon_24.png"),1:(title:"Sina微博登录（未实现）",logo:"sns_icon_1.png")]
     var tableView = UITableView()
     
     class func showLoginVC(){
