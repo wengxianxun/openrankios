@@ -54,4 +54,9 @@
     }];
 }
 
+-(void)showRankFromScore:(NSString *)score block:(void(^)(int orenum))block{
+    
+    
+}
+
 @end

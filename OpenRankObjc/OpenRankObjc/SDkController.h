@@ -1,5 +1,5 @@
 //
-//  OpenRankController.h
+//  SDkController.h
 //  OpenRankObjc
 //
 //  Created by linxiaolong on 16/4/8.
@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OpenRankController : NSObject
+@interface SDkController : NSObject
 +(id)shareInstance;
-
--(void)initAppId:(NSString *)appId;
--(void)showRankFromScore:(NSString *)score block:(void(^)(int orenum))block;
 @end
