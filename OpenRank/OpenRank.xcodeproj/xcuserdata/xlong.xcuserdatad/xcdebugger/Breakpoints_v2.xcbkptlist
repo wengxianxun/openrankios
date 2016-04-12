@@ -600,7 +600,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/SDKController.swift"
-                  timestampString = "481774945.423278"
+                  timestampString = "482138223.614639"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -615,7 +615,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/SDKController.swift"
-                  timestampString = "481774945.423512"
+                  timestampString = "482138223.614781"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -648,7 +648,151 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRank/OpenRankController.swift"
-            timestampString = "481772886.300577"
+            timestampString = "482138188.363788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "login(_:appId:nickName:logo:block:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.62098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.621116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRank/OpenRankController.swift"
+            timestampString = "482138188.363788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "login(_:appId:nickName:logo:block:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.623087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.623269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "436">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRank/OpenRankController.swift"
+            timestampString = "482138188.363788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "login(_:appId:nickName:logo:block:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.623988"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.624096"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRank/OpenRankController.swift"
+            timestampString = "482138188.363788"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -660,160 +804,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "OpenRank.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OpenRank"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.432606"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OpenRankKit.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OpenRankKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.432724"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OpenRank/OpenRankController.swift"
-            timestampString = "481772886.660634"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "login(_:appId:nickName:logo:block:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OpenRank.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OpenRank"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.433359"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "436">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OpenRankKit.OpenRankController.(login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OpenRankKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.433467"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "436">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OpenRank/OpenRankController.swift"
-            timestampString = "481772910.829741"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "login(_:appId:nickName:logo:block:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "OpenRank.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.434258"
+                  timestampString = "482138223.624869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "952">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OpenRankKit.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "OpenRankKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.434414"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "952">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OpenRank/OpenRankController.swift"
-            timestampString = "481772911.565796"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "login(_:appId:nickName:logo:block:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OpenRank.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "OpenRank"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.43513"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "972">
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "512">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -823,11 +823,11 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.43523"
+                  timestampString = "482138223.624975"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
@@ -838,12 +838,12 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.435347"
+                  timestampString = "482138223.625065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "972">
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "512">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -853,11 +853,11 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
-                  timestampString = "481774945.43543"
+                  timestampString = "482138223.625147"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
                   offsetFromSymbolStart = "88">
                </Location>
             </Locations>
@@ -886,7 +886,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.43649"
+                  timestampString = "482138223.626539"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -901,7 +901,7 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.436595"
+                  timestampString = "482138223.626673"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -934,7 +934,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.437338"
+                  timestampString = "482138223.627847"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -949,7 +949,7 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.43744"
+                  timestampString = "482138223.627983"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -982,7 +982,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.4381"
+                  timestampString = "482138223.629919"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "87"
@@ -997,7 +997,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.438235"
+                  timestampString = "482138223.630771"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "88"
@@ -1012,7 +1012,7 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.438319"
+                  timestampString = "482138223.631231"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "87"
@@ -1027,7 +1027,7 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.4384"
+                  timestampString = "482138223.631592"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "88"
@@ -1060,7 +1060,7 @@
                   moduleName = "OpenRank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.439699"
+                  timestampString = "482138223.635828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "88"
@@ -1075,12 +1075,60 @@
                   moduleName = "OpenRankKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/WxxHttpRequest.swift"
-                  timestampString = "481774945.439796"
+                  timestampString = "482138223.636217"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "88"
                   endingLineNumber = "88"
                   offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRank/OpenRankController.swift"
+            timestampString = "482138164.638587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "login(_:appId:nickName:logo:block:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRank.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "OpenRank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.638146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OpenRankKit.OpenRankController.login (Swift.String, appId : Swift.String, nickName : Swift.String, logo : Swift.String, block : (backbool : Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/OpenRank/OpenRank/OpenRankController.swift"
+                  timestampString = "482138223.638263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -10,7 +10,7 @@
 
 @interface OpenRankController : NSObject
 +(id)shareInstance;
-
+-(NSString*)appId;
 -(void)initAppId:(NSString *)appId;
 -(void)showRankFromScore:(NSString *)score block:(void(^)(int orenum))block;
 @end

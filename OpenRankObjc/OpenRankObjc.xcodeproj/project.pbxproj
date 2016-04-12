@@ -20,6 +20,14 @@
 		A8521CD81CB7590600B864B5 /* WxxURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD71CB7590600B864B5 /* WxxURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A8521CDC1CB75AB900B864B5 /* OpenRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDB1CB75AB900B864B5 /* OpenRankController.m */; };
 		A8521CE31CB7AB7900B864B5 /* SDkController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CE21CB7AB7900B864B5 /* SDkController.m */; };
+		A8905DE71CBB479D0061AB6A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DE61CBB479D0061AB6A /* libz.tbd */; };
+		A8905DE91CBB47A70061AB6A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DE81CBB47A70061AB6A /* libstdc++.tbd */; };
+		A8905DEB1CBB47B00061AB6A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */; };
+		A8905DED1CBB47B80061AB6A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */; };
+		A8905DEF1CBB47C20061AB6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */; };
+		A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */; };
+		A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF21CBB47DB0061AB6A /* libiconv.tbd */; };
+		A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,15 @@
 		A8521CDD1CB7899C00B864B5 /* ORConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORConfig.h; sourceTree = "<group>"; };
 		A8521CE11CB7AB7900B864B5 /* SDkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDkController.h; sourceTree = "<group>"; };
 		A8521CE21CB7AB7900B864B5 /* SDkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDkController.m; sourceTree = "<group>"; };
+		A8905DE61CBB479D0061AB6A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A8905DE81CBB47A70061AB6A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8905DF21CBB47DB0061AB6A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxWkWebViewController.h; sourceTree = "<group>"; };
+		A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxWkWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */,
+				A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */,
+				A8905DEF1CBB47C20061AB6A /* CoreGraphics.framework in Frameworks */,
+				A8905DED1CBB47B80061AB6A /* libsqlite3.tbd in Frameworks */,
+				A8905DEB1CBB47B00061AB6A /* CoreTelephony.framework in Frameworks */,
+				A8905DE91CBB47A70061AB6A /* libstdc++.tbd in Frameworks */,
+				A8905DE71CBB479D0061AB6A /* libz.tbd in Frameworks */,
 				A8521CD21CB7537500B864B5 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +107,13 @@
 		A8521C991CB752AC00B864B5 = {
 			isa = PBXGroup;
 			children = (
+				A8905DF21CBB47DB0061AB6A /* libiconv.tbd */,
+				A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */,
+				A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */,
+				A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */,
+				A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */,
+				A8905DE81CBB47A70061AB6A /* libstdc++.tbd */,
+				A8905DE61CBB479D0061AB6A /* libz.tbd */,
 				A8521CA41CB752AC00B864B5 /* OpenRankObjc */,
 				A8521CBE1CB752AD00B864B5 /* OpenRankObjcUITests */,
 				A8521CA31CB752AC00B864B5 /* Products */,
@@ -171,6 +202,8 @@
 			children = (
 				A8521CDA1CB75AB900B864B5 /* OpenRankController.h */,
 				A8521CDB1CB75AB900B864B5 /* OpenRankController.m */,
+				A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */,
+				A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -286,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8521CAD1CB752AC00B864B5 /* ViewController.m in Sources */,
+				A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */,
 				A8521CAA1CB752AC00B864B5 /* AppDelegate.m in Sources */,
 				A8521CD81CB7590600B864B5 /* WxxURLRequest.m in Sources */,
 				A8521CD11CB7537500B864B5 /* sdkCall.m in Sources */,
@@ -488,6 +522,7 @@
 				A8521CC61CB752AD00B864B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8521CC71CB752AD00B864B5 /* Build configuration list for PBXNativeTarget "OpenRankObjcUITests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +531,7 @@
 				A8521CC91CB752AD00B864B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

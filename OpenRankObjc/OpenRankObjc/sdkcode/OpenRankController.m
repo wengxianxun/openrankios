@@ -25,6 +25,9 @@
     return openrankcontroller;
 }
 
+-(NSString*)appId{
+    return _appId;
+}
 -(void)initAppId:(NSString *)appId{
     self.appId = appId;
 }

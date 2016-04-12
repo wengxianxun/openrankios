@@ -98,8 +98,10 @@ protocol OpenrankProtocol {
      */
     public func login(openId:String,appId:String,nickName:String,logo:String,block:(backbool:Bool)->Void) {
         
-        let url = "http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)"
+        let url = "http://ios-spot.joyingmobi.com/v2/reqf?s=1,5,b6a4ba10dab728bf,fPoO,1,23g3yfPIuWH-kK48t0RPxgUFWRVbcB1ilHcOXnSRWt7DosbARTRxUWoboAOIIH6c4oB00X0eWY1NFuhkihDx20m1Hr-8XmnFckbtXKjLpH55khLflw-036DH9hRcbG7xoD7pc7PpEYm3XLJfdLCs3pkzWSXHBSWR.pwOjQn7oNfyR.jV8hB6ZYG5nNYK1leP4X0RFBh3cBWHPfTzT8iYhuWxmxSBKtikSHYKsHgmUoAZwf-up4jPaiGpNlqgnGYQFVc4v6HG.siOqPzzEEf6gGpyWOHhet8zk3oN9ar-ouk1HZoViOMTAgWZ5NVRe1v2W7Q5xaDF9WDYP3xb65yss6IZNMiRwejw1sr.tD74Lm5ZVX2RGISH8KtMAxOBGuIBo---K5zhJacMYqCODP52PR1u1myHPqhTY5ydNwJr1v.yg034NSiiiGTRyGCiSVKly4NTKmvf39YmrFq.xEbLiPu0QYZ.Qjus4R9tyg.TcH521Cly-qrvcg-hY.HbYQOhqRzxCwFg9QKvw0.UwwLhESp8EgEQ0HBqwZ4wcLJ2pOzQoV0Q-2xMcsR-Hb5VrYLrnIp2hi.xtVIMFs7bMGa-W3mqRn3ZkQZO6iDu.sGe0dRR40NQFC9T4asU1eKoynSr.c9SUYFb4atNObAy,"
+        //"http://openrank.duapp.com/index.php?c=user&a=login&user_openid=\(openId)&app_id=\(appId)&score_score=\(0)&user_name=\(nickName)&user_logo=\(logo)"
         WxxLog.DEBUG("登录url:\(url)")
+        
         let wxxrequest = WxxHttpRequest()
         wxxrequest.requestGetFromAsyn(url) { (back) in
             
