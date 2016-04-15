@@ -9,14 +9,18 @@
 #import "OpenRankController.h"
 #import "ORConfig.h"
 #import "WxxURLRequest.h"
+#import "WxxWkWebViewController.h"
+
+
 @interface OpenRankController()
 
 @property (nonatomic,retain)NSString *appId;
+
 @end
 
 @implementation OpenRankController
 
-+(id)shareInstance{
++(OpenRankController*)shareInstance{
     static OpenRankController *openrankcontroller = nil;
     static dispatch_once_t oncetoken;
     dispatch_once(&oncetoken, ^{
@@ -24,7 +28,7 @@
     });
     return openrankcontroller;
 }
-
+ 
 -(NSString*)appId{
     return _appId;
 }
@@ -47,6 +51,7 @@
 -(void)loginFromOpenId:(NSString *)openId appId:(NSString *)appId logo:(NSString *)logo nickName:(NSString *)nickName block:(void(^)(BOOL backbool))block{
     
     NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=user&a=login&user_openid=%@&app_id=%@&score_score=%@&user_name=%@&user_logo=%@",openId,appId,@"0",nickName,logo];
+    NSLog(@"%@",url);
     WxxURLRequest *request = [WxxURLRequest hnRrequestWithURL:[NSURL URLWithString:url]];
     [request URLRequestAsynchronouslyWithCompletionUsingBlock:^(BOOL finished, WxxURLRequest *request) {
         
@@ -57,9 +62,18 @@
     }];
 }
 
--(void)showRankFromScore:(NSString *)score block:(void(^)(int orenum))block{
+-(void)showRankFromScore:(NSString *)score block:(void(^)(OpenRankEnum orenum))block{
+    if (self.htmlblock) {
+        self.htmlblock = nil;
+    }
+    self.htmlblock = block;
     
-    
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    WxxWkWebViewController *wkvc = [[WxxWkWebViewController alloc]init];
+    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:wkvc];
+    [window.rootViewController presentViewController:nv animated:YES completion:^{
+        
+    }];
 }
 
 @end

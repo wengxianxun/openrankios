@@ -92,6 +92,8 @@ class WxxWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,W
         let leftBtn = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Done, target: self, action: action)
         self.navigationItem.rightBarButtonItem = leftBtn
     }
+    
+    
     func login() {
         //登录 回调给开发者自己调用？
         //还是内置实现多平台登录？

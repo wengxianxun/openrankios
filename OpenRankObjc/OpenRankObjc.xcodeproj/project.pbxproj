@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A801F1B31CC0D3DB0048421C /* sns_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */; };
+		A801F1B41CC0D3DB0048421C /* sns_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */; };
+		A801F1B51CC0D3DB0048421C /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B11CC0D3DB0048421C /* sns_icon_24.png */; };
+		A801F1B61CC0D3DB0048421C /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */; };
 		A8521CA71CB752AC00B864B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CA61CB752AC00B864B5 /* main.m */; };
 		A8521CAA1CB752AC00B864B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CA91CB752AC00B864B5 /* AppDelegate.m */; };
 		A8521CAD1CB752AC00B864B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CAC1CB752AC00B864B5 /* ViewController.m */; };
@@ -28,6 +32,7 @@
 		A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */; };
 		A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF21CBB47DB0061AB6A /* libiconv.tbd */; };
 		A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
+		A8CEF47D1CBF8A0E0004FB1F /* WxxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_1.png; sourceTree = "<group>"; };
+		A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_1@2x.png"; sourceTree = "<group>"; };
+		A801F1B11CC0D3DB0048421C /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_24.png; sourceTree = "<group>"; };
+		A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_24@2x.png"; sourceTree = "<group>"; };
 		A8521CA21CB752AC00B864B5 /* OpenRankObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenRankObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8521CA61CB752AC00B864B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8521CA81CB752AC00B864B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +85,8 @@
 		A8905DF21CBB47DB0061AB6A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxWkWebViewController.h; sourceTree = "<group>"; };
 		A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxWkWebViewController.m; sourceTree = "<group>"; };
+		A8CEF47B1CBF8A0E0004FB1F /* WxxLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxLoginViewController.h; sourceTree = "<group>"; };
+		A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +115,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A801F1AE1CC0D3CE0048421C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */,
+				A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */,
+				A801F1B11CC0D3DB0048421C /* sns_icon_24.png */,
+				A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		A8521C991CB752AC00B864B5 = {
 			isa = PBXGroup;
 			children = (
@@ -211,8 +233,11 @@
 		A8521CE01CB7AB6200B864B5 /* othercode */ = {
 			isa = PBXGroup;
 			children = (
+				A801F1AE1CC0D3CE0048421C /* image */,
 				A8521CE11CB7AB7900B864B5 /* SDkController.h */,
 				A8521CE21CB7AB7900B864B5 /* SDkController.m */,
+				A8CEF47B1CBF8A0E0004FB1F /* WxxLoginViewController.h */,
+				A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */,
 			);
 			name = othercode;
 			sourceTree = "<group>";
@@ -297,8 +322,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A801F1B61CC0D3DB0048421C /* sns_icon_24@2x.png in Resources */,
+				A801F1B51CC0D3DB0048421C /* sns_icon_24.png in Resources */,
 				A8521CD31CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				A8521CB51CB752AC00B864B5 /* LaunchScreen.storyboard in Resources */,
+				A801F1B41CC0D3DB0048421C /* sns_icon_1@2x.png in Resources */,
+				A801F1B31CC0D3DB0048421C /* sns_icon_1.png in Resources */,
 				A8521CB21CB752AC00B864B5 /* Assets.xcassets in Resources */,
 				A8521CB01CB752AC00B864B5 /* Main.storyboard in Resources */,
 			);
@@ -320,6 +349,7 @@
 			files = (
 				A8521CAD1CB752AC00B864B5 /* ViewController.m in Sources */,
 				A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */,
+				A8CEF47D1CBF8A0E0004FB1F /* WxxLoginViewController.m in Sources */,
 				A8521CAA1CB752AC00B864B5 /* AppDelegate.m in Sources */,
 				A8521CD81CB7590600B864B5 /* WxxURLRequest.m in Sources */,
 				A8521CD11CB7537500B864B5 /* sdkCall.m in Sources */,

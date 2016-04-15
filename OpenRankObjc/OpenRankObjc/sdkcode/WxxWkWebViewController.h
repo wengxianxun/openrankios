@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
-@interface WxxWkWebViewController : UIViewController<WKNavigationDelegate,WKUIDelegate>
+@interface WxxWkWebViewController : UIViewController<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 @property (nonatomic,retain)WKWebView *wkwebview;
 @end

@@ -19,13 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(closeSelf)];
+    self.navigationItem.leftBarButtonItem = left;
+    
     [self initwebView];
     [self loadHtmlRequest];
 }
 
 -(void)initwebView{
     self.config = [[WKWebViewConfiguration alloc]init];
+    [self.config.userContentController addScriptMessageHandler:self name:@"webViewApp"];
     self.wkwebview = [[WKWebView alloc]initWithFrame:self.view.frame configuration:self.config];
     self.wkwebview.navigationDelegate = self;
     self.wkwebview.UIDelegate = self;
@@ -38,6 +42,7 @@
     NSString *openId = [[NSUserDefaults standardUserDefaults]valueForKey:OPENRANKOPENID];
     NSString *appid = [[OpenRankController shareInstance] appId];
     NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\(%@!)&app_id=\(%@)&score_score=\(%@)",openId,appid,self.score];
+
     [self.wkwebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
@@ -70,9 +75,9 @@
         _progressView.translatesAutoresizingMaskIntoConstraints = false;
         [self.view addSubview:_progressView];
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[_progressView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_progressView)]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self.topLayoutGuide]-0-[progressView(2)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_progressView,self.topLayoutGuide)]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[topLayoutGuide]-0-[progressView(2)]" options:0 metrics:nil views:@{@"progressView":_progressView,@"topLayoutGuide":self.topLayoutGuide}]];
     }
-    _progressView.progress = newvalue.floatValue;
+    [self.progressView setProgress:self.wkwebview.estimatedProgress animated:YES];
     if (_progressView.progress == 1) {
         _progressView.progress = 0;
         [UIView animateWithDuration:0.2 animations:^{
@@ -85,6 +90,38 @@
         }];
     }
 }
+
+-(void)login{
+    [self closeSelf];
+    [OpenRankController shareInstance].htmlblock(LoginEnum);
+}
+-(void)logout{
+    [[OpenRankController shareInstance]logout];
+    [self rightBtn:@"登录" action:@selector(login)];
+    
+}
+-(void)closeSelf{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+-(void)rightBtn:(NSString *)tile action:(SEL)select{
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:tile style:UIBarButtonItemStyleDone target:self action:select];
+    self.navigationItem.rightBarButtonItem = right;
+}
+-(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    
+    NSDictionary *dic = message.body;
+    NSString *jsfunc = [dic objectForKey:@"jsfunc"];
+    
+    if ([jsfunc isEqualToString:@"nologin"]) {
+        [self rightBtn:@"登录" action:@selector(login)];
+    }else if ([jsfunc isEqualToString:@"islogin"]){
+        [self rightBtn:@"登录" action:@selector(logout)];
+    }
+}
+
 /*
 #pragma mark - Navigation
 

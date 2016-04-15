@@ -10,4 +10,6 @@
 
 @interface SDkController : NSObject
 +(id)shareInstance;
+-(void)showRank;
+-(void)qqlogin;
 @end
