@@ -12,3 +12,5 @@
 #define OPENRANKOPENID       @"openrankopenid"
 #define OPENRANKUSERNAME     @"openrankusername"
 #define OPENRANKUSERLOGO     @"openrankuserlogo"
+
+#define kLOGINSUCCESSNOTIFACATION  @"kLOGINSUCCESSNOTIFACATION"

@@ -10,4 +10,5 @@
 #import <WebKit/WebKit.h>
 @interface WxxWkWebViewController : UIViewController<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 @property (nonatomic,retain)WKWebView *wkwebview;
+-(id)init:(NSString *)score;
 @end

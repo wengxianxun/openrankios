@@ -32,6 +32,22 @@
 		A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */; };
 		A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF21CBB47DB0061AB6A /* libiconv.tbd */; };
 		A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
+		A8B012391CC4E22B009B28DD /* OpenRankKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B012381CC4E22B009B28DD /* OpenRankKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B0123D1CC4E22B009B28DD /* OpenRankKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */; };
+		A8B0123E1CC4E22B009B28DD /* OpenRankKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A8B012431CC4E239009B28DD /* sns_icon_1.png in Sources */ = {isa = PBXBuildFile; fileRef = A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */; };
+		A8B012441CC4E239009B28DD /* sns_icon_1@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */; };
+		A8B012451CC4E239009B28DD /* sns_icon_24.png in Sources */ = {isa = PBXBuildFile; fileRef = A801F1B11CC0D3DB0048421C /* sns_icon_24.png */; };
+		A8B012461CC4E239009B28DD /* sns_icon_24@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */; };
+		A8B012471CC4E242009B28DD /* OpenRankController.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDA1CB75AB900B864B5 /* OpenRankController.h */; };
+		A8B012481CC4E242009B28DD /* OpenRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDB1CB75AB900B864B5 /* OpenRankController.m */; };
+		A8B012491CC4E242009B28DD /* WxxWkWebViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */; };
+		A8B0124A1CC4E242009B28DD /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
+		A8B0124B1CC4E24B009B28DD /* WxxURLRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD61CB7590600B864B5 /* WxxURLRequest.h */; };
+		A8B0124C1CC4E24B009B28DD /* WxxURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD71CB7590600B864B5 /* WxxURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8B0124D1CC4E250009B28DD /* ORConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDD1CB7899C00B864B5 /* ORConfig.h */; };
+		A8B0124E1CC4E27B009B28DD /* OpenRankController.h in Headers */ = {isa = PBXBuildFile; fileRef = A8521CDA1CB75AB900B864B5 /* OpenRankController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B012591CC4E454009B28DD /* ORConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A8521CDD1CB7899C00B864B5 /* ORConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8CEF47D1CBF8A0E0004FB1F /* WxxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +59,28 @@
 			remoteGlobalIDString = A8521CA11CB752AC00B864B5;
 			remoteInfo = OpenRankObjc;
 		};
+		A8B0123B1CC4E22B009B28DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8521C9A1CB752AC00B864B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B012351CC4E22B009B28DD;
+			remoteInfo = OpenRankKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8B012421CC4E22B009B28DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A8B0123E1CC4E22B009B28DD /* OpenRankKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_1.png; sourceTree = "<group>"; };
@@ -85,6 +122,9 @@
 		A8905DF21CBB47DB0061AB6A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxWkWebViewController.h; sourceTree = "<group>"; };
 		A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxWkWebViewController.m; sourceTree = "<group>"; };
+		A8B012361CC4E22B009B28DD /* OpenRankKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenRankKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B012381CC4E22B009B28DD /* OpenRankKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenRankKit.h; sourceTree = "<group>"; };
+		A8B0123A1CC4E22B009B28DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8CEF47B1CBF8A0E0004FB1F /* WxxLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxLoginViewController.h; sourceTree = "<group>"; };
 		A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +136,7 @@
 			files = (
 				A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */,
 				A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */,
+				A8B0123D1CC4E22B009B28DD /* OpenRankKit.framework in Frameworks */,
 				A8905DEF1CBB47C20061AB6A /* CoreGraphics.framework in Frameworks */,
 				A8905DED1CBB47B80061AB6A /* libsqlite3.tbd in Frameworks */,
 				A8905DEB1CBB47B00061AB6A /* CoreTelephony.framework in Frameworks */,
@@ -106,6 +147,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A8521CB81CB752AD00B864B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B012321CC4E22B009B28DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,6 +186,7 @@
 				A8905DE61CBB479D0061AB6A /* libz.tbd */,
 				A8521CA41CB752AC00B864B5 /* OpenRankObjc */,
 				A8521CBE1CB752AD00B864B5 /* OpenRankObjcUITests */,
+				A8B012371CC4E22B009B28DD /* OpenRankKit */,
 				A8521CA31CB752AC00B864B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +196,7 @@
 			children = (
 				A8521CA21CB752AC00B864B5 /* OpenRankObjc.app */,
 				A8521CBB1CB752AD00B864B5 /* OpenRankObjcUITests.xctest */,
+				A8B012361CC4E22B009B28DD /* OpenRankKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,7 +292,29 @@
 			name = othercode;
 			sourceTree = "<group>";
 		};
+		A8B012371CC4E22B009B28DD /* OpenRankKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8B012381CC4E22B009B28DD /* OpenRankKit.h */,
+				A8B0123A1CC4E22B009B28DD /* Info.plist */,
+			);
+			path = OpenRankKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A8B012331CC4E22B009B28DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B012391CC4E22B009B28DD /* OpenRankKit.h in Headers */,
+				A8B012591CC4E454009B28DD /* ORConfig.h in Headers */,
+				A8B0124E1CC4E27B009B28DD /* OpenRankController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A8521CA11CB752AC00B864B5 /* OpenRankObjc */ = {
@@ -252,10 +324,12 @@
 				A8521C9E1CB752AC00B864B5 /* Sources */,
 				A8521C9F1CB752AC00B864B5 /* Frameworks */,
 				A8521CA01CB752AC00B864B5 /* Resources */,
+				A8B012421CC4E22B009B28DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8B0123C1CC4E22B009B28DD /* PBXTargetDependency */,
 			);
 			name = OpenRankObjc;
 			productName = OpenRankObjc;
@@ -280,6 +354,24 @@
 			productReference = A8521CBB1CB752AD00B864B5 /* OpenRankObjcUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A8B012351CC4E22B009B28DD /* OpenRankKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B012411CC4E22B009B28DD /* Build configuration list for PBXNativeTarget "OpenRankKit" */;
+			buildPhases = (
+				A8B012311CC4E22B009B28DD /* Sources */,
+				A8B012321CC4E22B009B28DD /* Frameworks */,
+				A8B012331CC4E22B009B28DD /* Headers */,
+				A8B012341CC4E22B009B28DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenRankKit;
+			productName = OpenRankKit;
+			productReference = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,6 +387,9 @@
 					A8521CBA1CB752AD00B864B5 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = A8521CA11CB752AC00B864B5;
+					};
+					A8B012351CC4E22B009B28DD = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -313,6 +408,7 @@
 			targets = (
 				A8521CA11CB752AC00B864B5 /* OpenRankObjc */,
 				A8521CBA1CB752AD00B864B5 /* OpenRankObjcUITests */,
+				A8B012351CC4E22B009B28DD /* OpenRankKit */,
 			);
 		};
 /* End PBXProject section */
@@ -334,6 +430,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A8521CB91CB752AD00B864B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B012341CC4E22B009B28DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,6 +470,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8B012311CC4E22B009B28DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B0124D1CC4E250009B28DD /* ORConfig.h in Sources */,
+				A8B0124B1CC4E24B009B28DD /* WxxURLRequest.h in Sources */,
+				A8B0124C1CC4E24B009B28DD /* WxxURLRequest.m in Sources */,
+				A8B012471CC4E242009B28DD /* OpenRankController.h in Sources */,
+				A8B012481CC4E242009B28DD /* OpenRankController.m in Sources */,
+				A8B012491CC4E242009B28DD /* WxxWkWebViewController.h in Sources */,
+				A8B0124A1CC4E242009B28DD /* WxxWkWebViewController.m in Sources */,
+				A8B012431CC4E239009B28DD /* sns_icon_1.png in Sources */,
+				A8B012441CC4E239009B28DD /* sns_icon_1@2x.png in Sources */,
+				A8B012451CC4E239009B28DD /* sns_icon_24.png in Sources */,
+				A8B012461CC4E239009B28DD /* sns_icon_24@2x.png in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,6 +495,11 @@
 			isa = PBXTargetDependency;
 			target = A8521CA11CB752AC00B864B5 /* OpenRankObjc */;
 			targetProxy = A8521CBC1CB752AD00B864B5 /* PBXContainerItemProxy */;
+		};
+		A8B0123C1CC4E22B009B28DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B012351CC4E22B009B28DD /* OpenRankKit */;
+			targetProxy = A8B0123B1CC4E22B009B28DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,6 +659,44 @@
 			};
 			name = Release;
 		};
+		A8B0123F1CC4E22B009B28DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenRankKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8B012401CC4E22B009B28DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenRankKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -562,6 +726,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A8B012411CC4E22B009B28DD /* Build configuration list for PBXNativeTarget "OpenRankKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B0123F1CC4E22B009B28DD /* Debug */,
+				A8B012401CC4E22B009B28DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,6 +17,15 @@
 
 @implementation WxxWkWebViewController
 
+-(id)init:(NSString *)score{
+    
+    self = [super init];
+    if (self) {
+        self.score = score;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,8 +50,8 @@
     }
     NSString *openId = [[NSUserDefaults standardUserDefaults]valueForKey:OPENRANKOPENID];
     NSString *appid = [[OpenRankController shareInstance] appId];
-    NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\(%@!)&app_id=\(%@)&score_score=\(%@)",openId,appid,self.score];
-
+    NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\%@&app_id=\%@&score_score=\%@",openId,appid,self.score];
+    NSLog(@"%@",url);
     [self.wkwebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
@@ -118,7 +127,7 @@
     if ([jsfunc isEqualToString:@"nologin"]) {
         [self rightBtn:@"登录" action:@selector(login)];
     }else if ([jsfunc isEqualToString:@"islogin"]){
-        [self rightBtn:@"登录" action:@selector(logout)];
+        [self rightBtn:@"退出登录" action:@selector(logout)];
     }
 }
 

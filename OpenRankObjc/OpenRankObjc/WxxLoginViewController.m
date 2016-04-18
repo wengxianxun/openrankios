@@ -8,6 +8,7 @@
 
 #import "WxxLoginViewController.h"
 #import "SDkController.h"
+#import "ORConfig.h"
 @interface WxxLoginViewController ()
 @property (nonatomic,retain)UITableView *tableView;
 @property (nonatomic,retain)NSArray *arr;
@@ -26,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(closeSelf) name:kLOGINSUCCESSNOTIFACATION object:nil];
     self.arr = [NSArray arrayWithObjects:@{@"title":@"qq登录",@"logo":@"sns_icon_24.png"}, nil];
     // Do any additional setup after loading the view.
     UIBarButtonItem *left = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(closeSelf)];

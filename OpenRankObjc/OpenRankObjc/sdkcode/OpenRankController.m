@@ -57,6 +57,20 @@
         
         NSError *error = nil;
         NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:request.data options:NSJSONReadingAllowFragments error:&error];
+        NSString *result = [jsonDic objectForKey:@"result"];
+        if ([result isEqualToString:@"1"]) {
+            [[NSUserDefaults standardUserDefaults]setValue:nickName forKey:OPENRANKUSERNAME];
+            [[NSUserDefaults standardUserDefaults]setValue:logo forKey:OPENRANKUSERLOGO];
+            [[NSUserDefaults standardUserDefaults]setValue:openId forKey:OPENRANKOPENID];
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:OPENRANKISLOGIN];
+            block(YES);
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:kLOGINSUCCESSNOTIFACATION object:nil];
+            
+            [self showRankFromScore:@"" block:^(OpenRankEnum orenum) {
+                
+            }];
+        }
         
         NSLog(@"返回结果");
     }];
@@ -69,7 +83,7 @@
     self.htmlblock = block;
     
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
-    WxxWkWebViewController *wkvc = [[WxxWkWebViewController alloc]init];
+    WxxWkWebViewController *wkvc = [[WxxWkWebViewController alloc]init:score];
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:wkvc];
     [window.rootViewController presentViewController:nv animated:YES completion:^{
         
