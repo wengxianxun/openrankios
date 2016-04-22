@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A801F1B31CC0D3DB0048421C /* sns_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */; };
+		A801F1B41CC0D3DB0048421C /* sns_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */; };
+		A801F1B51CC0D3DB0048421C /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B11CC0D3DB0048421C /* sns_icon_24.png */; };
+		A801F1B61CC0D3DB0048421C /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */; };
+		A8521CA71CB752AC00B864B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CA61CB752AC00B864B5 /* main.m */; };
+		A8521CAA1CB752AC00B864B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CA91CB752AC00B864B5 /* AppDelegate.m */; };
+		A8521CAD1CB752AC00B864B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CAC1CB752AC00B864B5 /* ViewController.m */; };
+		A8521CB01CB752AC00B864B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8521CAE1CB752AC00B864B5 /* Main.storyboard */; };
+		A8521CB21CB752AC00B864B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8521CB11CB752AC00B864B5 /* Assets.xcassets */; };
+		A8521CB51CB752AC00B864B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8521CB31CB752AC00B864B5 /* LaunchScreen.storyboard */; };
+		A8521CC01CB752AD00B864B5 /* OpenRankObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CBF1CB752AD00B864B5 /* OpenRankObjcUITests.m */; };
+		A8521CD11CB7537500B864B5 /* sdkCall.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CCD1CB7537500B864B5 /* sdkCall.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8521CD21CB7537500B864B5 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8521CCF1CB7537500B864B5 /* TencentOpenAPI.framework */; };
+		A8521CD31CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8521CD01CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		A8521CD81CB7590600B864B5 /* WxxURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD71CB7590600B864B5 /* WxxURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8521CDC1CB75AB900B864B5 /* OpenRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDB1CB75AB900B864B5 /* OpenRankController.m */; };
+		A8521CE31CB7AB7900B864B5 /* SDkController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CE21CB7AB7900B864B5 /* SDkController.m */; };
+		A8905DE71CBB479D0061AB6A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DE61CBB479D0061AB6A /* libz.tbd */; };
+		A8905DE91CBB47A70061AB6A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DE81CBB47A70061AB6A /* libstdc++.tbd */; };
+		A8905DEB1CBB47B00061AB6A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */; };
+		A8905DED1CBB47B80061AB6A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */; };
+		A8905DEF1CBB47C20061AB6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */; };
+		A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */; };
+		A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8905DF21CBB47DB0061AB6A /* libiconv.tbd */; };
+		A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
+		A8B012391CC4E22B009B28DD /* OpenRankKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B012381CC4E22B009B28DD /* OpenRankKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B0123D1CC4E22B009B28DD /* OpenRankKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */; };
+		A8B0123E1CC4E22B009B28DD /* OpenRankKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A8B012471CC4E242009B28DD /* OpenRankController.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDA1CB75AB900B864B5 /* OpenRankController.h */; };
+		A8B012481CC4E242009B28DD /* OpenRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDB1CB75AB900B864B5 /* OpenRankController.m */; };
+		A8B012491CC4E242009B28DD /* WxxWkWebViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */; };
+		A8B0124A1CC4E242009B28DD /* WxxWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */; };
+		A8B0124B1CC4E24B009B28DD /* WxxURLRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD61CB7590600B864B5 /* WxxURLRequest.h */; };
+		A8B0124C1CC4E24B009B28DD /* WxxURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8521CD71CB7590600B864B5 /* WxxURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8B0124D1CC4E250009B28DD /* ORConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = A8521CDD1CB7899C00B864B5 /* ORConfig.h */; };
+		A8B0124E1CC4E27B009B28DD /* OpenRankController.h in Headers */ = {isa = PBXBuildFile; fileRef = A8521CDA1CB75AB900B864B5 /* OpenRankController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B012591CC4E454009B28DD /* ORConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A8521CDD1CB7899C00B864B5 /* ORConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8CEF47D1CBF8A0E0004FB1F /* WxxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8521CBC1CB752AD00B864B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8521C9A1CB752AC00B864B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8521CA11CB752AC00B864B5;
+			remoteInfo = OpenRankObjc;
+		};
+		A8B0123B1CC4E22B009B28DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8521C9A1CB752AC00B864B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B012351CC4E22B009B28DD;
+			remoteInfo = OpenRankKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8B012421CC4E22B009B28DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A8B0123E1CC4E22B009B28DD /* OpenRankKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_1.png; sourceTree = "<group>"; };
+		A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_1@2x.png"; sourceTree = "<group>"; };
+		A801F1B11CC0D3DB0048421C /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_24.png; sourceTree = "<group>"; };
+		A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sns_icon_24@2x.png"; sourceTree = "<group>"; };
+		A8521CA21CB752AC00B864B5 /* OpenRankObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenRankObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8521CA61CB752AC00B864B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8521CA81CB752AC00B864B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A8521CA91CB752AC00B864B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A8521CAB1CB752AC00B864B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A8521CAC1CB752AC00B864B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A8521CAF1CB752AC00B864B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8521CB11CB752AC00B864B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8521CB41CB752AC00B864B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8521CB61CB752AC00B864B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8521CBB1CB752AD00B864B5 /* OpenRankObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRankObjcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8521CBF1CB752AD00B864B5 /* OpenRankObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenRankObjcUITests.m; sourceTree = "<group>"; };
+		A8521CC11CB752AD00B864B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8521CCB1CB7537500B864B5 /* OpenRank-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenRank-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8521CCC1CB7537500B864B5 /* sdkCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkCall.h; sourceTree = "<group>"; };
+		A8521CCD1CB7537500B864B5 /* sdkCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdkCall.m; sourceTree = "<group>"; };
+		A8521CCE1CB7537500B864B5 /* sdkDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkDef.h; sourceTree = "<group>"; };
+		A8521CCF1CB7537500B864B5 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		A8521CD01CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		A8521CD61CB7590600B864B5 /* WxxURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxURLRequest.h; sourceTree = "<group>"; };
+		A8521CD71CB7590600B864B5 /* WxxURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxURLRequest.m; sourceTree = "<group>"; };
+		A8521CDA1CB75AB900B864B5 /* OpenRankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenRankController.h; sourceTree = "<group>"; };
+		A8521CDB1CB75AB900B864B5 /* OpenRankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenRankController.m; sourceTree = "<group>"; };
+		A8521CDD1CB7899C00B864B5 /* ORConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORConfig.h; sourceTree = "<group>"; };
+		A8521CE11CB7AB7900B864B5 /* SDkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDkController.h; sourceTree = "<group>"; };
+		A8521CE21CB7AB7900B864B5 /* SDkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDkController.m; sourceTree = "<group>"; };
+		A8905DE61CBB479D0061AB6A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A8905DE81CBB47A70061AB6A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8905DF21CBB47DB0061AB6A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxWkWebViewController.h; sourceTree = "<group>"; };
+		A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxWkWebViewController.m; sourceTree = "<group>"; };
+		A8B012361CC4E22B009B28DD /* OpenRankKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenRankKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B012381CC4E22B009B28DD /* OpenRankKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenRankKit.h; sourceTree = "<group>"; };
+		A8B0123A1CC4E22B009B28DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8CEF47B1CBF8A0E0004FB1F /* WxxLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WxxLoginViewController.h; sourceTree = "<group>"; };
+		A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WxxLoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8521C9F1CB752AC00B864B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8905DF31CBB47DB0061AB6A /* libiconv.tbd in Frameworks */,
+				A8905DF11CBB47CC0061AB6A /* SystemConfiguration.framework in Frameworks */,
+				A8B0123D1CC4E22B009B28DD /* OpenRankKit.framework in Frameworks */,
+				A8905DEF1CBB47C20061AB6A /* CoreGraphics.framework in Frameworks */,
+				A8905DED1CBB47B80061AB6A /* libsqlite3.tbd in Frameworks */,
+				A8905DEB1CBB47B00061AB6A /* CoreTelephony.framework in Frameworks */,
+				A8905DE91CBB47A70061AB6A /* libstdc++.tbd in Frameworks */,
+				A8905DE71CBB479D0061AB6A /* libz.tbd in Frameworks */,
+				A8521CD21CB7537500B864B5 /* TencentOpenAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8521CB81CB752AD00B864B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B012321CC4E22B009B28DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A801F1AE1CC0D3CE0048421C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A801F1AF1CC0D3DB0048421C /* sns_icon_1.png */,
+				A801F1B01CC0D3DB0048421C /* sns_icon_1@2x.png */,
+				A801F1B11CC0D3DB0048421C /* sns_icon_24.png */,
+				A801F1B21CC0D3DB0048421C /* sns_icon_24@2x.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		A8521C991CB752AC00B864B5 = {
+			isa = PBXGroup;
+			children = (
+				A8905DF21CBB47DB0061AB6A /* libiconv.tbd */,
+				A8905DF01CBB47CC0061AB6A /* SystemConfiguration.framework */,
+				A8905DEE1CBB47C20061AB6A /* CoreGraphics.framework */,
+				A8905DEC1CBB47B80061AB6A /* libsqlite3.tbd */,
+				A8905DEA1CBB47B00061AB6A /* CoreTelephony.framework */,
+				A8905DE81CBB47A70061AB6A /* libstdc++.tbd */,
+				A8905DE61CBB479D0061AB6A /* libz.tbd */,
+				A8521CA41CB752AC00B864B5 /* OpenRankObjc */,
+				A8521CBE1CB752AD00B864B5 /* OpenRankObjcUITests */,
+				A8B012371CC4E22B009B28DD /* OpenRankKit */,
+				A8521CA31CB752AC00B864B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8521CA31CB752AC00B864B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CA21CB752AC00B864B5 /* OpenRankObjc.app */,
+				A8521CBB1CB752AD00B864B5 /* OpenRankObjcUITests.xctest */,
+				A8B012361CC4E22B009B28DD /* OpenRankKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8521CA41CB752AC00B864B5 /* OpenRankObjc */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CE01CB7AB6200B864B5 /* othercode */,
+				A8521CD41CB7538C00B864B5 /* sdkcode */,
+				A8521CCA1CB7537500B864B5 /* threesdk */,
+				A8521CA81CB752AC00B864B5 /* AppDelegate.h */,
+				A8521CA91CB752AC00B864B5 /* AppDelegate.m */,
+				A8521CAB1CB752AC00B864B5 /* ViewController.h */,
+				A8521CAC1CB752AC00B864B5 /* ViewController.m */,
+				A8521CAE1CB752AC00B864B5 /* Main.storyboard */,
+				A8521CB11CB752AC00B864B5 /* Assets.xcassets */,
+				A8521CB31CB752AC00B864B5 /* LaunchScreen.storyboard */,
+				A8521CB61CB752AC00B864B5 /* Info.plist */,
+				A8521CA51CB752AC00B864B5 /* Supporting Files */,
+			);
+			path = OpenRankObjc;
+			sourceTree = "<group>";
+		};
+		A8521CA51CB752AC00B864B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CA61CB752AC00B864B5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8521CBE1CB752AD00B864B5 /* OpenRankObjcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CBF1CB752AD00B864B5 /* OpenRankObjcUITests.m */,
+				A8521CC11CB752AD00B864B5 /* Info.plist */,
+			);
+			path = OpenRankObjcUITests;
+			sourceTree = "<group>";
+		};
+		A8521CCA1CB7537500B864B5 /* threesdk */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CCB1CB7537500B864B5 /* OpenRank-Bridging-Header.h */,
+				A8521CCC1CB7537500B864B5 /* sdkCall.h */,
+				A8521CCD1CB7537500B864B5 /* sdkCall.m */,
+				A8521CCE1CB7537500B864B5 /* sdkDef.h */,
+				A8521CCF1CB7537500B864B5 /* TencentOpenAPI.framework */,
+				A8521CD01CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = threesdk;
+			sourceTree = "<group>";
+		};
+		A8521CD41CB7538C00B864B5 /* sdkcode */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CD91CB75A9700B864B5 /* controller */,
+				A8521CD51CB758FD00B864B5 /* http */,
+				A8521CDD1CB7899C00B864B5 /* ORConfig.h */,
+			);
+			path = sdkcode;
+			sourceTree = "<group>";
+		};
+		A8521CD51CB758FD00B864B5 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CD61CB7590600B864B5 /* WxxURLRequest.h */,
+				A8521CD71CB7590600B864B5 /* WxxURLRequest.m */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		A8521CD91CB75A9700B864B5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8521CDA1CB75AB900B864B5 /* OpenRankController.h */,
+				A8521CDB1CB75AB900B864B5 /* OpenRankController.m */,
+				A8905DF41CBB481A0061AB6A /* WxxWkWebViewController.h */,
+				A8905DF51CBB481A0061AB6A /* WxxWkWebViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		A8521CE01CB7AB6200B864B5 /* othercode */ = {
+			isa = PBXGroup;
+			children = (
+				A801F1AE1CC0D3CE0048421C /* image */,
+				A8521CE11CB7AB7900B864B5 /* SDkController.h */,
+				A8521CE21CB7AB7900B864B5 /* SDkController.m */,
+				A8CEF47B1CBF8A0E0004FB1F /* WxxLoginViewController.h */,
+				A8CEF47C1CBF8A0E0004FB1F /* WxxLoginViewController.m */,
+			);
+			name = othercode;
+			sourceTree = "<group>";
+		};
+		A8B012371CC4E22B009B28DD /* OpenRankKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8B012381CC4E22B009B28DD /* OpenRankKit.h */,
+				A8B0123A1CC4E22B009B28DD /* Info.plist */,
+			);
+			path = OpenRankKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A8B012331CC4E22B009B28DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B012391CC4E22B009B28DD /* OpenRankKit.h in Headers */,
+				A8B012591CC4E454009B28DD /* ORConfig.h in Headers */,
+				A8B0124E1CC4E27B009B28DD /* OpenRankController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A8521CA11CB752AC00B864B5 /* OpenRankObjc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8521CC41CB752AD00B864B5 /* Build configuration list for PBXNativeTarget "OpenRankObjc" */;
+			buildPhases = (
+				A8521C9E1CB752AC00B864B5 /* Sources */,
+				A8521C9F1CB752AC00B864B5 /* Frameworks */,
+				A8521CA01CB752AC00B864B5 /* Resources */,
+				A8B012421CC4E22B009B28DD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8B0123C1CC4E22B009B28DD /* PBXTargetDependency */,
+			);
+			name = OpenRankObjc;
+			productName = OpenRankObjc;
+			productReference = A8521CA21CB752AC00B864B5 /* OpenRankObjc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8521CBA1CB752AD00B864B5 /* OpenRankObjcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8521CC71CB752AD00B864B5 /* Build configuration list for PBXNativeTarget "OpenRankObjcUITests" */;
+			buildPhases = (
+				A8521CB71CB752AD00B864B5 /* Sources */,
+				A8521CB81CB752AD00B864B5 /* Frameworks */,
+				A8521CB91CB752AD00B864B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8521CBD1CB752AD00B864B5 /* PBXTargetDependency */,
+			);
+			name = OpenRankObjcUITests;
+			productName = OpenRankObjcUITests;
+			productReference = A8521CBB1CB752AD00B864B5 /* OpenRankObjcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A8B012351CC4E22B009B28DD /* OpenRankKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B012411CC4E22B009B28DD /* Build configuration list for PBXNativeTarget "OpenRankKit" */;
+			buildPhases = (
+				A8B012311CC4E22B009B28DD /* Sources */,
+				A8B012321CC4E22B009B28DD /* Frameworks */,
+				A8B012331CC4E22B009B28DD /* Headers */,
+				A8B012341CC4E22B009B28DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenRankKit;
+			productName = OpenRankKit;
+			productReference = A8B012361CC4E22B009B28DD /* OpenRankKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8521C9A1CB752AC00B864B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = wengxianxun;
+				TargetAttributes = {
+					A8521CA11CB752AC00B864B5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A8521CBA1CB752AD00B864B5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A8521CA11CB752AC00B864B5;
+					};
+					A8B012351CC4E22B009B28DD = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = A8521C9D1CB752AC00B864B5 /* Build configuration list for PBXProject "OpenRankObjc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8521C991CB752AC00B864B5;
+			productRefGroup = A8521CA31CB752AC00B864B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8521CA11CB752AC00B864B5 /* OpenRankObjc */,
+				A8521CBA1CB752AD00B864B5 /* OpenRankObjcUITests */,
+				A8B012351CC4E22B009B28DD /* OpenRankKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8521CA01CB752AC00B864B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A801F1B61CC0D3DB0048421C /* sns_icon_24@2x.png in Resources */,
+				A801F1B51CC0D3DB0048421C /* sns_icon_24.png in Resources */,
+				A8521CD31CB7537500B864B5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				A8521CB51CB752AC00B864B5 /* LaunchScreen.storyboard in Resources */,
+				A801F1B41CC0D3DB0048421C /* sns_icon_1@2x.png in Resources */,
+				A801F1B31CC0D3DB0048421C /* sns_icon_1.png in Resources */,
+				A8521CB21CB752AC00B864B5 /* Assets.xcassets in Resources */,
+				A8521CB01CB752AC00B864B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8521CB91CB752AD00B864B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B012341CC4E22B009B28DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8521C9E1CB752AC00B864B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8521CAD1CB752AC00B864B5 /* ViewController.m in Sources */,
+				A8905DF61CBB481A0061AB6A /* WxxWkWebViewController.m in Sources */,
+				A8CEF47D1CBF8A0E0004FB1F /* WxxLoginViewController.m in Sources */,
+				A8521CAA1CB752AC00B864B5 /* AppDelegate.m in Sources */,
+				A8521CD81CB7590600B864B5 /* WxxURLRequest.m in Sources */,
+				A8521CD11CB7537500B864B5 /* sdkCall.m in Sources */,
+				A8521CA71CB752AC00B864B5 /* main.m in Sources */,
+				A8521CDC1CB75AB900B864B5 /* OpenRankController.m in Sources */,
+				A8521CE31CB7AB7900B864B5 /* SDkController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8521CB71CB752AD00B864B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8521CC01CB752AD00B864B5 /* OpenRankObjcUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B012311CC4E22B009B28DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B0124D1CC4E250009B28DD /* ORConfig.h in Sources */,
+				A8B0124B1CC4E24B009B28DD /* WxxURLRequest.h in Sources */,
+				A8B0124C1CC4E24B009B28DD /* WxxURLRequest.m in Sources */,
+				A8B012471CC4E242009B28DD /* OpenRankController.h in Sources */,
+				A8B012481CC4E242009B28DD /* OpenRankController.m in Sources */,
+				A8B012491CC4E242009B28DD /* WxxWkWebViewController.h in Sources */,
+				A8B0124A1CC4E242009B28DD /* WxxWkWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8521CBD1CB752AD00B864B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8521CA11CB752AC00B864B5 /* OpenRankObjc */;
+			targetProxy = A8521CBC1CB752AD00B864B5 /* PBXContainerItemProxy */;
+		};
+		A8B0123C1CC4E22B009B28DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B012351CC4E22B009B28DD /* OpenRankKit */;
+			targetProxy = A8B0123B1CC4E22B009B28DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8521CAE1CB752AC00B864B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8521CAF1CB752AC00B864B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8521CB31CB752AC00B864B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8521CB41CB752AC00B864B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8521CC21CB752AD00B864B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8521CC31CB752AD00B864B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8521CC51CB752AD00B864B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenRankObjc/threesdk",
+				);
+				INFOPLIST_FILE = OpenRankObjc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankObjc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8521CC61CB752AD00B864B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenRankObjc/threesdk",
+				);
+				INFOPLIST_FILE = OpenRankObjc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankObjc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A8521CC81CB752AD00B864B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OpenRankObjcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankObjcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OpenRankObjc;
+			};
+			name = Debug;
+		};
+		A8521CC91CB752AD00B864B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OpenRankObjcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankObjcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OpenRankObjc;
+			};
+			name = Release;
+		};
+		A8B0123F1CC4E22B009B28DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenRankKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8B012401CC4E22B009B28DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenRankKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxx.OpenRankKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8521C9D1CB752AC00B864B5 /* Build configuration list for PBXProject "OpenRankObjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8521CC21CB752AD00B864B5 /* Debug */,
+				A8521CC31CB752AD00B864B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8521CC41CB752AD00B864B5 /* Build configuration list for PBXNativeTarget "OpenRankObjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8521CC51CB752AD00B864B5 /* Debug */,
+				A8521CC61CB752AD00B864B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8521CC71CB752AD00B864B5 /* Build configuration list for PBXNativeTarget "OpenRankObjcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8521CC81CB752AD00B864B5 /* Debug */,
+				A8521CC91CB752AD00B864B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B012411CC4E22B009B28DD /* Build configuration list for PBXNativeTarget "OpenRankKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B0123F1CC4E22B009B28DD /* Debug */,
+				A8B012401CC4E22B009B28DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8521C9A1CB752AC00B864B5 /* Project object */;
+}

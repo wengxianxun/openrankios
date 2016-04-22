@@ -1,0 +1,6 @@
+framework module OpenRankKit {
+  umbrella header "OpenRankKit.h"
+
+  export *
+  module * { export * }
+}
