@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SDkController : NSObject
-+(id)shareInstance;
++(SDkController *)shareInstance;
 -(void)showRank;
 -(void)qqlogin;
 @end

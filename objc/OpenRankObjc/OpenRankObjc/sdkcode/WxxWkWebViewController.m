@@ -50,7 +50,8 @@
     }
     NSString *openId = [[NSUserDefaults standardUserDefaults]valueForKey:OPENRANKOPENID];
     NSString *appid = [[OpenRankController shareInstance] appId];
-    NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=\%@&app_id=\%@&score_score=\%@",openId,appid,self.score];
+    
+    NSString *url = [NSString stringWithFormat:@"http://openrank.duapp.com/index.php?c=rank&a=ShowRankHtml&user_openid=%@&app_id=%@&score_score=%@",openId,appid,self.score];
     NSLog(@"%@",url);
     [self.wkwebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRankObjc/sdkcode/WxxWkWebViewController.m"
-            timestampString = "482641841.258303"
+            timestampString = "483270134.191712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRankObjc/sdkcode/WxxWkWebViewController.m"
-            timestampString = "482642824.587828"
+            timestampString = "483270134.191712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-userContentController:didReceiveScriptMessage:"
             landmarkType = "5">
             <Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenRankObjc/sdkcode/WxxWkWebViewController.m"
-            timestampString = "482642825.371776"
+            timestampString = "483270134.191712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-userContentController:didReceiveScriptMessage:"
             landmarkType = "5">
             <Locations>
@@ -191,6 +191,102 @@
                   startingLineNumber = "127"
                   endingLineNumber = "127"
                   offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+            timestampString = "483263364.583695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-loadHtmlRequest"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WxxWkWebViewController loadHtmlRequest]"
+                  moduleName = "OpenRankObjc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/objc/OpenRankObjc/OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+                  timestampString = "483264557.591493"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WxxWkWebViewController loadHtmlRequest]"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/objc/OpenRankObjc/OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+                  timestampString = "483264557.591654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+            timestampString = "483270134.191712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-loadHtmlRequest"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WxxWkWebViewController loadHtmlRequest]"
+                  moduleName = "OpenRankObjc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/objc/OpenRankObjc/OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+                  timestampString = "483265638.352556"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WxxWkWebViewController loadHtmlRequest]"
+                  moduleName = "OpenRankKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xlong/Work/openrank/objc/OpenRankObjc/OpenRankObjc/sdkcode/WxxWkWebViewController.m"
+                  timestampString = "483265638.3528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "488">
                </Location>
             </Locations>
          </BreakpointContent>

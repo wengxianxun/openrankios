@@ -78,12 +78,32 @@
     }];
 }
 
+-(void)checkHaveUser{
+    NSString *openId = [[NSUserDefaults standardUserDefaults]valueForKey:OPENRANKOPENID];
+    
+    NSString *nouser = @"0";
+    //如果openid 为nil, 用时间戳设立一个id,后台根据这个id创建一个游客身份
+    if (!openId) {
+        openId = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+        nouser = @"1";
+        [self loginFromOpenId:openId appId:self.appId logo:@"http://qzapp.qlogo.cn/qzapp/222222/58FA4E6A2FCDE42C19B48B73EC9F1190/100" nickName:@"游客2" score:self.score block:^(BOOL backbool) {
+            
+        }];
+    }
+    return;
+}
+
 -(void)showRankFromScore:(NSString *)score block:(void(^)(OpenRankEnum orenum))block{
     if (self.htmlblock) {
         self.htmlblock = nil;
     }
     self.htmlblock = block;
     self.score = score;
+    
+    //检查是否游客，默认本地没有openid都是游客
+    [self checkHaveUser];
+    
+    
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     WxxWkWebViewController *wkvc = [[WxxWkWebViewController alloc]init:score];
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:wkvc];

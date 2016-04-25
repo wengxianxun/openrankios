@@ -17,12 +17,12 @@
 @property (nonatomic,retain)NSString *score;
 @end
 
-#define appid @"a1b516e2c4a282c3f281a30b5b9237bb"
+#define appid @"10000"
 @implementation SDkController
 
 
 
-+(id)shareInstance{
++(SDkController *)shareInstance{
     static SDkController *openrankcontroller = nil;
     static dispatch_once_t oncetoken;
     dispatch_once(&oncetoken, ^{
@@ -59,7 +59,7 @@
 -(void)login{
     
     sdkCall *sdc = [sdkCall getinstance];
-    [[OpenRankController shareInstance]loginFromOpenId:sdc.oauth.openId appId:appid logo:sdc.logo nickName:sdc.nickname block:^(BOOL backbool) {
+    [[OpenRankController shareInstance]loginFromOpenId:sdc.oauth.openId appId:appid logo:sdc.logo nickName:sdc.nickname score:self.score block:^(BOOL backbool) {
         NSLog(@"登录陈宫");
         
     }];
